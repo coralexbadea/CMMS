@@ -59,7 +59,6 @@ public class RaportController {
     public ModelAndView showRaport(@PathVariable(name="year")int year, @PathVariable(name="month")String month,@PathVariable(name="mname")String mname) {
         ModelAndView modelAndView = new ModelAndView();
         Raport raport = raportService.getRaport(year, month, mname);
-        List<Task> tasks = raport.getTasks();
         List<TaskType> taskTypes = taskTypeService.listAll();
 
         modelAndView.addObject("raport", raport);

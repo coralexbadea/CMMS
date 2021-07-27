@@ -93,7 +93,7 @@
                     <input type="text" th:field="*{tasks[__${i.index}__].realSituation}"  />
                 </td>
                 <td>
-                    <a th:href="@{'/task/view/'+*{tasks[__${i.index}__].taskType.ttid}}">View</a>
+                    <a th:href="@{'/task/image/'+*{tasks[__${i.index}__].tid}}">View</a>
                 </td>
                 <p><input type="hidden" th:field="*{tasks[__${i.index}__].tid}"  /></p>
                 <p><input type="hidden" th:field="*{tasks[__${i.index}__].raport}"  /></p>

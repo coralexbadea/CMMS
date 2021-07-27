@@ -2,6 +2,7 @@ package com.adecco.mentenance.service;
 
 import com.adecco.mentenance.domain.*;
 import com.adecco.mentenance.repository.TaskRepository;
+import com.adecco.mentenance.storage.FileSystemStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +17,8 @@ public class TaskService {
     TaskRepository taskRepository;
     @Autowired
     TaskTypeService taskTypeService;
-
+    @Autowired
+    FileSystemStorageService storageService;
     public List<Task> listAll() {
         return taskRepository.findAll();
     }
@@ -35,6 +37,7 @@ public class TaskService {
 
     @Transactional
     public void delete(Long id) {
+        storageService.deleteFolder(id);
         taskRepository.deleteById(id);
     }
 

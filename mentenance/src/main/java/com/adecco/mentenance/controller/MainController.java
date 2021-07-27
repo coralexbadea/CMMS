@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -51,5 +52,19 @@ public class MainController {
         return "redirect:/raport/current";
     }
 
+
+
+    @GetMapping(value="/view/{tid}")
+    public ModelAndView view(@PathVariable(name="tid")Long tid){
+        ModelAndView modelAndView = new ModelAndView("raport/createimage");
+//        System.out.println("here0");
+//
+//        List<String> strings = storageService.loadAll(tid).map(path->path.toString()).filter(s->s.contains(".jpg")||s.contains(".jpeg")||s.contains(".png")).collect(Collectors.toList());
+//        System.out.println("here2");
+//
+//        modelAndView.addObject("files", strings);
+//        System.out.println("here3");
+        return modelAndView;
+    }
 }
 

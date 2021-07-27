@@ -80,7 +80,6 @@ public class RaportService {
     public String[][] getPlan(int year, String mname) {
         List<Raport> raports = raportRepository.findAllByYearAndMachine_Mname(year, mname);
         if(raports.size() == 0){
-            System.out.println("HRER!@@@");
             for(int i = 1; i <= 12; i++){
                 this.createRaports(year, String.valueOf(i));
             }
