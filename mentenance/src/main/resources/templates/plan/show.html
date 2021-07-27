@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org" xmlns:width="http://www.w3.org/1999/xhtml"
+      xmlns:height="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan</title>
+</head>
+<body>
+<table border="1">
+  <thead>
+  <a th:href="@{/admin}">Back to admin page</a>
+
+  <tr>
+      <th>Subansamblu</th>
+      <th><a th:href="@{'/raport/'+${year}+'/1/'+${mname}}">Ianuarie</a></th>
+      <th><a th:href="@{'/raport/'+${year}+'/2/'+${mname}}">Februarie</a></th>
+      <th><a th:href="@{'/raport/'+${year}+'/3/'+${mname}}">Martie</a></th>
+      <th><a th:href="@{'/raport/'+${year}+'/4/'+${mname}}">Aprilie</a></th>
+      <th><a th:href="@{'/raport/'+${year}+'/5/'+${mname}}">Mai</a></th>
+      <th><a th:href="@{'/raport/'+${year}+'/6/'+${mname}}">Iunie</a></th>
+      <th><a th:href="@{'/raport/'+${year}+'/7/'+${mname}}">Iulie</a></th>
+      <th><a th:href="@{'/raport/'+${year}+'/8/'+${mname}}">August</a></th>
+      <th><a th:href="@{'/raport/'+${year}+'/9/'+${mname}}">Septembrie</a></th>
+      <th><a th:href="@{'/raport/'+${year}+'/10/'+${mname}}">Octombrie</a></th>
+    <th><a th:href="@{'/raport/'+${year}+'/11/'+${mname}}">Noiembrie</a></th>
+    <th><a th:href="@{'/raport/'+${year}+'/12/'+${mname}}">Decembrie</a></th>
+
+    </tr>
+  </thead>
+  <tbody >
+    <tr th:each="row: ${strings}">
+      <td th:each="value: ${row}" th:text="${value}" />
+    </tr>
+
+  </tbody>
+</table>
+</body>
+</html>

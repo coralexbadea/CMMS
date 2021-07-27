@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:width="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Edit Performance</title>
+</head>
+<body>
+<br>
+<a th:href="@{/admin}">Back to admin page</a>
+
+<div align="center">
+    <h1>Edit Task Type</h1>
+    <br />
+    <form th:action="@{'/taskType/edit'}" th:object="${taskType}"
+          method="post">
+        <table border="0">
+
+
+            <tr>
+                <td> <input type="hidden"  th:field="*{ttid}">
+            </tr>
+
+            <tr>
+                <td><input type="text" th:field="*{ttname}"> <label
+                        th:if="${#fields.hasErrors('ttname')}" th:errors="*{ttname}"></label></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

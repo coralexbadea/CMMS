@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+  <meta charset="UTF-8">
+  <title>Show Rapport</title>
+</head>
+<body>
+<br>
+<div sec:authorize="isAuthenticated()">
+  <a th:href="@{/admin}">Back to admin page</a>
+</div>
+<th:block th:each="ctype : ${ctypes}">
+  <p th:text="'Subansamburi tip' + ${ctype}"></p>
+  <form th:action="@{'/raport/save'}"
+        th:object="${tasks}" method="post">
+    <table border="1">
+      <thead>
+      <tr>
+        <th>Lucrari conf. plan anual</th>
+        <th>Actiune 1</th>
+        <th>Actiune 2</th>
+        <th>Actiune 3</th>
+        <th>Obs. Lucrari</th>
+        <th>Personal Intern</th>
+        <th>Personal Extern</th>
+        <th>Lucrari conf. situatie reala</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="task: ${tasks}">
+
+        <td>
+          <span sec:authorize="isAuthenticated()">
+              <select th:field="*{task.taskType.ttid}",required="false">
+                  <option th:each="tt : ${taskTypes}" th:value="${tt.ttid}" th:text="${tt.ttname}">
+                  </option>
+              </select>
+          </span>
+          <span sec:authorize="isAnonymous()">
+              <input type="hidden" th:field="*{task.taskType.ttid}"  />
+              <p th:text="*{task.taskType.ttname}"></p>
+          </span>
+        </td>
+        <td>
+          <select th:field="*{task.action1}">
+            <option th:each="tt : ${taskTypes}" th:value="${tt.ttname}" th:text="${tt.ttname}">
+            </option>
+          </select>
+        </td>
+        <td>
+          <select th:field="*{task.action2}">
+            <option th:each="tt : ${taskTypes}" th:value="${tt.ttname}" th:text="${tt.ttname}">
+            </option>
+          </select>
+        </td>
+        <td>
+          <select th:field="*{task.action3}">
+            <option th:each="tt : ${taskTypes}" th:value="${tt.ttname}" th:text="${tt.ttname}">
+            </option>
+          </select>
+        </td>
+        <td>
+          <input type="text" th:field="*{task.obsWorker}"  />
+        </td>
+        <td>
+          <input type="text" th:field="*{task.pintern}"  />
+        </td>
+        <td>
+          <input type="text" th:field="*{task.pextern}"  />
+        </td>
+        <td>
+          <input type="text" th:field="*{task.realSituation}"  />
+        </td>
+        <p><input type="hidden" th:field="*{task.tid}"  /></p>
+        <p><input type="hidden" th:field="*{task.raport}"  /></p>
+        <p><input type="hidden" th:field="*{task.component}"  /></p>
+
+      </tr>
+      </tbody>
+    </table>
+    <tr>
+      <td colspan="2"><button type="submit">Save</button></td>
+    </tr>
+  </form>
+</th:block >
+</body>
+</html>

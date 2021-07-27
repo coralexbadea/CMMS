@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:width="http://www.w3.org/1999/xhtml"
+      xmlns:height="http://www.w3.org/1999/xhtml">
+<head>
+    <title>assignment Form</title>
+</head>
+<body>
+<br>
+<a th:href="@{/admin}">Back to admin page</a>
+
+<form th:action="@{'/taskType/create'}"
+      th:object="${taskType}" method="post"
+      role="form">
+    <h2>Task Type Form</h2>
+    <table border="0" cellpadding="10">
+
+
+        <tr>
+            <td><input type="text" th:field="*{ttname}" placeholder="Name"> <label
+                    th:if="${#fields.hasErrors('ttname')}" th:errors="*{ttname}"></label></td>
+        </tr>
+
+        <tr>
+            <td><button type="assignment">Register Task Type</button></td>
+        </tr>
+    </table>
+
+</form>
+
+
+
+
+</body>
+</html>

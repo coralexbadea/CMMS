@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <title>Admin Page</title>
+</head>
+
+<body>
+
+<div align="center">
+
+    <div sec:authorize="isAuthenticated()">
+        Welcome <b><span sec:authentication="name">Username</span></b>
+    </div>
+    <form th:action="@{/registration}" method="get" >
+        <button type="Submit">Create an account</button>
+    </form>
+    <a th:href="@{/machine/index}">Machines</a>
+    <br>
+    <a th:href="@{/componentType/index}">Types of Components</a>
+    <br>
+    <a th:href="@{/taskType/index}">Types of Tasks</a>
+    <br>
+    <a th:href="@{/plan/current}">See Current Plan</a>
+    <br>
+    <a th:href="@{/plan/index}">See All Plans</a>
+
+</div>
+</body>
+</html>

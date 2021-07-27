@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:width="http://www.w3.org/1999/xhtml"
+      xmlns:height="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Machine Form</title>
+</head>
+<body>
+<br>
+<a th:href="@{/admin}">Back to admin page</a>
+
+<form th:action="@{'/machine/create'}"
+      th:object="${machine}" method="post"
+      role="form">
+    <h2>Machine Form </h2>
+    <table border="0" cellpadding="10">
+        <tr>
+            <td><input type="text" th:field="*{mname}" placeholder="Name"> <label
+                    th:if="${#fields.hasErrors('mname')}" th:errors="*{mname}"></label></td>
+        </tr>
+
+        <tr>
+            <td><button type="assignment">Register Machine</button></td>
+        </tr>
+    </table>
+
+</form>
+
+
+
+
+</body>
+</html>

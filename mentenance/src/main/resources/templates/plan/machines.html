@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport machines</title>
+</head>
+<body>
+<br>
+<a th:href="@{/admin}">Back to admin page</a>
+
+<div th:each="machine: ${machines}">
+  <a th:href="@{'/plan/'+${year}+'/'+${machine.mname}}">
+    <p th:text="${machine.mname}" /></p>
+  </a>
+  <br>
+</div>
+</body>
+</html>
