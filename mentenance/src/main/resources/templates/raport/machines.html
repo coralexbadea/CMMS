@@ -7,8 +7,12 @@
 </head>
 <body>
 <br>
-<a th:href="@{/admin}">Back to admin page</a>
-
+    <div sec:authorize="isAuthenticated()">
+        <a th:href="@{/admin}">Back to admin page</a>
+    </div>
+<!--    <div sec:authorize="isAnonymous()">-->
+<!--        <a th:href="@{/admin}">Log in</a>-->
+<!--    </div>-->
     <div th:each="machine: ${machines}">
         <a th:href="@{'/raport/'+${year}+'/'+${month}+'/'+${machine.mname}}">
             <p th:text="${machine.mname}" /></p>

@@ -50,6 +50,16 @@ public class TaskService {
         return tasks;
     }
 
+    public List<ComponentType> getComponentTypes(List<Task> tasks) {
+        List<ComponentType> componentTypes = new ArrayList<>();
+        for(Task t: tasks){
+            ComponentType ctype = t.getComponent().getComponentType();
+            if(!componentTypes.contains(ctype)){
+                componentTypes.add(ctype);
+            }
+        }
+        return componentTypes;
+    }
 
 
     //    public List<Task> createTasks(Machine machine){

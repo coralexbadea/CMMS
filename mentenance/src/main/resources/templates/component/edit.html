@@ -20,7 +20,10 @@
                 <td> <input type="hidden"  th:field="*{cid}"> <label
                         th:if="${#fields.hasErrors('cid')}" th:errors="*{cid}"></label>
             </tr>
-
+            <select th:field="*{componentType}",required="false">
+                <option th:each="ct : ${componentTypes}" th:value="${ct.ctid}" th:text="${ct.ctname}">
+                </option>
+            </select>
             <tr>
                 <td><input type="text" th:field="*{name}" placeholder="Name"> <label
                         th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></label></td>

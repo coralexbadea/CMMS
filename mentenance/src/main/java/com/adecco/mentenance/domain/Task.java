@@ -1,6 +1,7 @@
 package com.adecco.mentenance.domain;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -30,6 +31,7 @@ public class Task {
     private String pintern;
     private String pextern;
     private String realSituation;
+    private LocalDate date;
 
     public Task(Component c, TaskType t, Raport r) {
         this.component = c;
@@ -38,6 +40,7 @@ public class Task {
         this.action2 = t.getTtname();
         this.action3 = t.getTtname();
         this.raport = r;
+        this.date = LocalDate.now();
     }
 
     public Task(){
@@ -131,4 +134,13 @@ public class Task {
     public void setAction3(String action3) {
         this.action3 = action3;
     }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
 }

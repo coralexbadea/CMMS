@@ -8,7 +8,6 @@
 <body>
 <br>
 <a th:href="@{/admin}">Back to admin page</a>
-<a th:href="@{/plan/create}">Create a new plan</a>
 
 <div th:each="year: ${years}">
   <a  th:text="${year} " th:href="@{'/plan/'+${year}}">

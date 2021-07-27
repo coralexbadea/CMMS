@@ -1,6 +1,7 @@
 package com.adecco.mentenance.controller;
 
 import com.adecco.mentenance.domain.Component;
+import com.adecco.mentenance.domain.ComponentType;
 import com.adecco.mentenance.service.ComponentService;
 import com.adecco.mentenance.service.ComponentTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +49,8 @@ public class ComponentController {
     public ModelAndView edit(@PathVariable(name = "id") Long id) {
         ModelAndView modelAndVie = new ModelAndView("component/edit");
         Component component = componentService.findById(id);
+        List<ComponentType> componentTypes = componentTypeService.listAll();
+        modelAndVie.addObject("componentTypes", componentTypes);
         modelAndVie.addObject("component", component);
         modelAndVie.addObject("mid", component.getMachine().getMid());
         return modelAndVie;

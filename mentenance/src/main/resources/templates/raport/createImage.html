@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Images</title>
+</head>
+<body>
+
+<table border="0" cellpadding="10">
+    <thead>
+    </thead>
+    <tbody>
+<!--    Strings-->
+        <tr th:each="file: ${files}">
+            <td >
+                <img th:src="@{'http://127.0.0.1:8080/task/'+${file}  }" width="350"/>
+                <a th:href="@{'/task/delete/'+${file}}">Delete</a>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<form method="POST" enctype="multipart/form-data" th:action="@{'/task/view/'+${tid}}">
+    <table>
+    </tr>
+    <div sec:authorize="hasAnyAuthority('ADMIN')">
+      <tr>
+        Upload image:
+        <input type="file" class="custom-file-input" name="file" value="Upload" style="padding-bottom: 5px"/>
+      </tr></div>
+
+    <tr>
+      <td><button type="submit">Upload</button></td>
+    </tr>
+    </table>
+</form>
+
+    <div th:if="${message}">
+      <h2 th:text="${message}"/>
+    </div>
+</body>
+</html>

@@ -1,14 +1,12 @@
 package com.adecco.mentenance.service;
 
-import com.adecco.mentenance.domain.Component;
-import com.adecco.mentenance.domain.Machine;
-import com.adecco.mentenance.domain.Raport;
-import com.adecco.mentenance.domain.Task;
+import com.adecco.mentenance.domain.*;
 import com.adecco.mentenance.repository.RaportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Arrays;
@@ -65,12 +63,24 @@ public class RaportService {
             }
             return  raportRepository.findByYearAndMonthAndMachine_Mname(year, month, mname);
         }
+        List<Task> tasks = raport.getTasks();
+        List<Task> newtasks = new ArrayList<>();
+        List<ComponentType> componentTypes = taskService.getComponentTypes(tasks);
+        for(ComponentType componentType: componentTypes){
+            for(Task t: tasks){
+                if(t.getComponent().getComponentType().equals(componentType)){
+                    newtasks.add(t);
+                }
+            }
+        }
+        raport.setTasks(newtasks);
         return raport;
     }
 
     public String[][] getPlan(int year, String mname) {
         List<Raport> raports = raportRepository.findAllByYearAndMachine_Mname(year, mname);
         if(raports.size() == 0){
+            System.out.println("HRER!@@@");
             for(int i = 1; i <= 12; i++){
                 this.createRaports(year, String.valueOf(i));
             }
@@ -122,6 +132,17 @@ public class RaportService {
         List<Raport> raports = raportRepository.findAllByYear(year);
         for(Raport r: raports){
             this.delete(r.getRid());
+        }
+    }
+
+    public void updateTasksDate(List<Task> tasks) {
+        for(Task t: tasks){
+            Task last = taskService.findById(t.getTid());
+            if(!t.getAction1().equals(last.getAction1()) ||
+                    !t.getAction2().equals(last.getAction2()) ||
+                            !t.getAction3().equals(last.getAction3())){
+                        t.setDate(LocalDate.now());
+            }
         }
     }
 }

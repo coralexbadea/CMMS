@@ -13,7 +13,7 @@ public class ComponentType {
     private Long ctid;
     private String ctname;
 
-    @OneToMany( cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, orphanRemoval = true, mappedBy = "componentType")
+    @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true, mappedBy = "componentType")
     private Set<Component> components = new HashSet<>();
 
     public Long getCtid() {

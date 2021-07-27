@@ -10,6 +10,13 @@
 <div sec:authorize="isAuthenticated()">
     <a th:href="@{/admin}">Back to admin page</a>
 </div>
+<div sec:authorize="isAuthenticated()">
+    <a th:href="@{'/raport/pdf/' + ${raport.rid}}">Download PDF</a>
+</div>
+<div sec:authorize="isAuthenticated()">
+    <a th:href="@{'/raport/excel/' + ${raport.rid}}">Export as Excel</a>
+</div>
+
     <p th:text="'Rapport for' +${raport.getMonth()} + ' ' + ${raport.getYear()}"></p>
     <form th:action="@{'/raport/save'}"
           th:object="${raport}" method="post">
@@ -22,14 +29,16 @@
         <table border="1">
             <thead>
                 <tr>
+                    <th>Tip </th>
+                    <th>Subansamblu</th>
                     <th>Lucrari conf. plan anual</th>
                     <th>Actiune 1</th>
                     <th>Actiune 2</th>
                     <th>Actiune 3</th>
                     <th>Obs. Lucrari</th>
                     <th>Personal Intern</th>
-                    <th>Personal Extern</th>
                     <th>Lucrari conf. situatie reala</th>
+                    <th>Images</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,7 +47,12 @@
 <!--                <td>-->
 <!--                    <input type="text" th:field="*{tasks[__${i.index}__].taskType.ttid}"  />-->
 <!--                </td>-->
-
+                <td>
+                    <p th:text="*{tasks[__${i.index}__].component.componentType.getCtname()}"></p>
+                </td>
+                <td>
+                    <p th:text="*{tasks[__${i.index}__].component.getName()}"></p>
+                </td>
                 <td>
                     <span sec:authorize="isAuthenticated()">
                         <select th:field="*{tasks[__${i.index}__].taskType.ttid}",required="false">
@@ -76,15 +90,14 @@
                     <input type="text" th:field="*{tasks[__${i.index}__].pintern}"  />
                 </td>
                 <td>
-                    <input type="text" th:field="*{tasks[__${i.index}__].pextern}"  />
+                    <input type="text" th:field="*{tasks[__${i.index}__].realSituation}"  />
                 </td>
                 <td>
-                    <input type="text" th:field="*{tasks[__${i.index}__].realSituation}"  />
+                    <a th:href="@{'/task/view/'+*{tasks[__${i.index}__].taskType.ttid}}">View</a>
                 </td>
                 <p><input type="hidden" th:field="*{tasks[__${i.index}__].tid}"  /></p>
                 <p><input type="hidden" th:field="*{tasks[__${i.index}__].raport}"  /></p>
                 <p><input type="hidden" th:field="*{tasks[__${i.index}__].component}"  /></p>
-
             </tr>
             </tbody>
         </table>

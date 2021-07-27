@@ -15,7 +15,7 @@ public class Machine {
     @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true, mappedBy = "machine")
     private Set<Component> components = new HashSet<>();
 
-    @OneToMany( cascade = CascadeType.PERSIST, fetch = FetchType.LAZY, orphanRemoval = false, mappedBy = "machine")
+    @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = false, mappedBy = "machine")
     private Set<Component> raports = new HashSet<>();
 
     public Long getMid() {

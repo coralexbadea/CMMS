@@ -26,19 +26,20 @@
         <h2>List of components</h2>
         <thead>
         <tr>
+            <th>Tip</th>
             <th>Name</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="component : ${components}">
-            <td th:text="${component.name}">Name</td>
+            <td th:text="${component.componentType.ctname}"></td>
+            <td th:text="${component.name}"></td>
 
-
-            <td sec:authorize="hasAnyAuthority('ADMIN')">
+            <td>
                 <a th:href="@{'/component/edit/'+${component.cid}}">Edit</a>
             </td>
 
-            <td sec:authorize="hasAnyAuthority('ADMIN')">
+            <td>
                 <a th:href="@{'/component/delete/'+${id}+'/'+${component.cid}}">Delete</a>
             </td>
 

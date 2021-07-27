@@ -21,7 +21,7 @@ public class Component {
     @JoinColumn(name="ctid")
     private ComponentType componentType;
 
-    @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true, mappedBy = "machine")
+    @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true, mappedBy = "machine")
     private Set<Component> tasks = new HashSet<>();
 
     public Long getCid() {
@@ -63,4 +63,6 @@ public class Component {
     public void setTasks(Set<Component> tasks) {
         this.tasks = tasks;
     }
+
+
 }

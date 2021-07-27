@@ -24,12 +24,15 @@ public class ComponentService {
     public void save(Component c, Long id) {
         Machine machine = machineService.findById(id);
         c.setMachine(machine);
+        componentRepository.save(c);
         List<Raport> raports = raportService.findByMachine(machine);
         for(Raport raport : raports){
             Task t = new Task(c, taskTypeService.findByName(" "), raport);
-            raportService.addTask(raport.getRid(), t);
+            List<Task> tasks = raport.getTasks();
+            tasks.add(t);
+            raport.setTasks(tasks);
+            raportService.save(raport);
         }
-        componentRepository.save(c);
     }
 
     public void save(Component c) {
@@ -42,6 +45,7 @@ public class ComponentService {
 
     public Component saveEdit(Component component) {
         Component a = componentRepository.findById(component.getCid()).get();
+        a.setComponentType(component.getComponentType());
         a.setName(component.getName());
         return componentRepository.save(a);
     }
