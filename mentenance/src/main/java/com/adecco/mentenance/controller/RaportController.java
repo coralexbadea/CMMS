@@ -8,26 +8,20 @@ import com.adecco.mentenance.service.*;
 import com.itextpdf.text.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
-import org.apache.commons.io.FileUtils;
+import java.util.*;
+import java.util.stream.Collectors;
+
 
 @Controller
 @RequestMapping("/raport")
@@ -117,6 +111,21 @@ public class RaportController {
 
     }
 
+    @GetMapping(value="/chart/{id}")
+    public ModelAndView chart(@PathVariable(name="id")Long id) {
+        ModelAndView modelAndView = new ModelAndView();
+        List<String> labels = taskTypeService.listAll().stream().map(s->s.getTtname()).collect(Collectors.toList());
+        List<Integer> list1 = raportService.getTodoTasks(id);
+        List<Integer> list2 = raportService.getDoneTasks(id);
+        labels.remove(0);
+        list1.remove(0);
+        list2.remove(0);
+        modelAndView.addObject("labelsX", labels);
+        modelAndView.addObject("list1", list1);
+        modelAndView.addObject("list2", list2);
+        modelAndView.setViewName("widgets/chart");
 
+        return modelAndView;
+    }
 
 }

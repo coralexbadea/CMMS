@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Chart</title>
+<!--  <script type="text/javascript" th:src="@{/resources/.../zingchart.min.js}"></script>-->
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+</head>
+<body>
+  <div id="myChart"></div>
+
+<!--  <ul>-->
+<!--    <li th:each="label,i in ${labelsX}">-->
+<!--      <p th:text="${i} - ${label}"></p>-->
+<!--    </li>-->
+<!--  </ul>-->
+
+</body>
+</html>
+
+<script th:inline="javascript">
+  console.log([[${list1}]])
+  console.log([[${list2}]])
+  const chartData = {
+    type: "bar",
+    legend: {"layout": "1x5", //row x column
+      "x": "20%",
+      "y": "8%",},
+    scaleX: {values: [[${labelsX}]]},
+    series: [
+      {values: [[${list1}]], text: "To Do"},
+      {values: [[${list2}]], text: "Done"}
+    ]
+  };
+  zingchart.render({
+    id: "myChart",
+    data: chartData,
+    height: 400,
+    width: 600
+  });
+</script>

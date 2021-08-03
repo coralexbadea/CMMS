@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Arrays;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -21,6 +18,9 @@ public class RaportService {
     MachineService machineService;
     @Autowired
     TaskService taskService;
+    @Autowired
+    TaskTypeService taskTypeService;
+
     public void createRaports(int year, String month){
         List<Machine> machines = machineService.listAll();
         for (Machine machine: machines){
@@ -143,5 +143,47 @@ public class RaportService {
                         t.setDate(LocalDate.now());
             }
         }
+    }
+
+    public List<Integer> getTodoTasks(Long id) {
+        Raport raport = raportRepository.findById(id).get();
+        List<TaskType> taskTypes = taskTypeService.listAll();
+        List<Task> tasks = raport.getTasks();
+
+        List<Integer> result = new ArrayList<>();
+        for(TaskType tt : taskTypes){
+            int sum = 0;
+            for(Task t: tasks){
+                if(t.getTaskType().equals(tt)){
+                    sum += 1;
+                }
+            }
+            result.add(sum);
+        }
+       return result;
+    }
+
+    public List<Integer> getDoneTasks(Long id) {
+        Raport raport = raportRepository.findById(id).get();
+        List<TaskType> taskTypes = taskTypeService.listAll();
+        List<Task> tasks = raport.getTasks();
+
+        List<Integer> result = new ArrayList<>();
+        for(TaskType tt : taskTypes){
+            int sum = 0;
+            for(Task t: tasks){
+                if(t.getAction1().equals(tt.getTtname())){
+                    sum += 1;
+                }
+                if(t.getAction2().equals(tt.getTtname())){
+                    sum += 1;
+                }
+                if(t.getAction3().equals(tt.getTtname())){
+                    sum += 1;
+                }
+            }
+            result.add(sum);
+        }
+        return result;
     }
 }

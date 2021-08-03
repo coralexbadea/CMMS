@@ -2,6 +2,8 @@
 <html  xmlns:th="http://www.thymeleaf.org"
        xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+
     <meta charset="UTF-8">
     <title>assignments Information</title>
 </head>
@@ -11,15 +13,9 @@
 
     <div align="center">
 
-
-        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Logout"/>
-        </form>
-
         <form  sec:authorize="hasAnyAuthority('ADMIN')" th:action="@{'/componentType/create'}" method="get">
             <button type="Submit">Add Component Type</button>
         </form>
-        <a th:href="@{/admin}">Back to Admin Page</a>
 
         <table border="1" cellpadding="10">
             <h2>List of Component Types</h2>

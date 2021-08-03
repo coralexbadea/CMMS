@@ -2,6 +2,7 @@
 <html  xmlns:th="http://www.thymeleaf.org"
        xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
     <meta charset="UTF-8">
     <title>assignments Information</title>
 </head>
@@ -10,11 +11,6 @@
 <a th:href="@{/admin}">Back to admin page</a>
 
     <div align="center">
-
-
-        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Logout"/>
-        </form>
 
         <form  sec:authorize="hasAnyAuthority('ADMIN')" th:action="@{'/taskType/create'}" method="get">
             <button type="Submit">Add Task Type</button>

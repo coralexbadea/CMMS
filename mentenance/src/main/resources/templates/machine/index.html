@@ -2,33 +2,25 @@
 <html  xmlns:th="http://www.thymeleaf.org"
        xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+
     <meta charset="UTF-8">
     <title>Machines Information</title>
 </head>
 <body>
 <br>
+<a th:href="@{/admin}">Back to Admin Page</a>
     <div align="center">
-
-
-        <div sec:authorize="isAuthenticated()">
-            Welcome <b><span sec:authentication="name">Username</span></b>
-        </div>
-
-        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Logout"/>
-        </form>
 
         <form  sec:authorize="hasAnyAuthority('ADMIN')" th:action="@{'/machine/create'}" method="get">
             <button type="Submit">Add Machine</button>
         </form>
-        <a th:href="@{/admin}">Back to Admin Page</a>
 
         <table border="1" cellpadding="10">
             <h2>List Machines</h2>
             <thead>
                 <tr>
                     <th>Name</th>
-
                 </tr>
             </thead>
             <tbody>

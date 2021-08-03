@@ -2,6 +2,8 @@
 <html  xmlns:th="http://www.thymeleaf.org"
        xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
+  <link th:href="@{/css/style.css}" rel="stylesheet">
+
   <meta charset="UTF-8">
   <title>Rapport machines</title>
 </head>
@@ -10,9 +12,10 @@
 <a th:href="@{/admin}">Back to admin page</a>
 
 <div th:each="machine: ${machines}">
-  <a th:href="@{'/plan/'+${year}+'/'+${machine.mname}}">
+  <a th:href="@{'/plan/'+${year}+'/'+${machine.mname}}" class="a-block">
     <p th:text="${machine.mname}" /></p>
   </a>
+
   <br>
 </div>
 </body>

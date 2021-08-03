@@ -2,6 +2,7 @@
 <html  xmlns:th="http://www.thymeleaf.org"
        xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Rapport machines</title>
 </head>
@@ -14,7 +15,7 @@
 <!--        <a th:href="@{/admin}">Log in</a>-->
 <!--    </div>-->
     <div th:each="machine: ${machines}">
-        <a th:href="@{'/raport/'+${year}+'/'+${month}+'/'+${machine.mname}}">
+        <a th:href="@{'/raport/'+${year}+'/'+${month}+'/'+${machine.mname}}" class="a-block main-font">
             <p th:text="${machine.mname}" /></p>
         </a>
         <br>
