@@ -59,7 +59,8 @@ public class FileSystemStorageService {
 	public void checkType(String filename) throws StorageException {
 		if (!(filename.contains(".jpg") ||
 				filename.contains(".png") ||
-				filename.contains(".jpeg"))) {
+				filename.contains(".jpeg")||
+				filename.contains(".mp4"))) {
 			throw new StorageException(
 					"Tipul imaginii este incorect "
 							+ filename);

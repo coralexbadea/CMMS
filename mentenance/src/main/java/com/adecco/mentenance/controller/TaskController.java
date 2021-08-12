@@ -29,9 +29,16 @@ public class TaskController {
     @PostMapping(value = "/image/{tid}")
     public String create(@PathVariable(name="tid") Long tid,@RequestParam("file") MultipartFile file,
                          RedirectAttributes redirectAttributes) throws IOException {
-        storageService.store(file, tid);
-        redirectAttributes.addFlashAttribute("message",
-                "You successfully uploaded " + file.getOriginalFilename() + "!");
+        try{
+            storageService.store(file, tid);
+            redirectAttributes.addFlashAttribute("message",
+                    "You successfully uploaded " + file.getOriginalFilename() + "!");
+        }
+        catch (Exception e){
+            redirectAttributes.addFlashAttribute("message",
+                    "An error occured: " + e.getMessage());
+        }
+
         return "redirect:/task/image/"+tid;
     }
 
@@ -40,6 +47,8 @@ public class TaskController {
         ModelAndView modelAndView = new ModelAndView("raport/image");
         List<String> strings = storageService.loadAll(tid).map(path->path.toString()).filter(s->s.contains(".jpg")||s.contains(".jpeg")||s.contains(".png")).collect(Collectors.toList());
         modelAndView.addObject("files", strings);
+        List<String> videos = storageService.loadAll(tid).map(path->path.toString()).filter(s->s.contains(".mp4")||s.contains(".mov")).collect(Collectors.toList());
+        modelAndView.addObject("videos", videos);
         modelAndView.addObject("ip_address",serverAddress);
         return modelAndView;
     }

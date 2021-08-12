@@ -24,12 +24,29 @@
     </tbody>
 </table>
 
+<table border="0" cellpadding="10">
+    <thead>
+    </thead>
+    <tbody>
+    <!--    Strings-->
+    <tr th:each="video: ${videos}">
+        <td >
+            <video width="350" controls>
+                <source  th:src="@{'http://'+${ip_address}+':8080/task/'+${video}  }" type="video/mp4">
+            </video>
+            <a th:href="@{'/task/delete/'+${video}}">Delete</a>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+
 <form method="POST" enctype="multipart/form-data" th:action="@{'/task/image/'+${tid}}">
     <table>
     </tr>
     <div>
       <tr>
-        Upload image:
+        Incarca Imagine sau Video(mp4):
         <input type="file" class="custom-file-input" name="file" value="Upload" style="padding-bottom: 5px"/>
       </tr></div>
 
