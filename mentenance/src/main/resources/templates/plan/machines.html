@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html  xmlns:th="http://www.thymeleaf.org"
-       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<html  xmlns:th="http://www.thymeleaf.org">
 <head>
   <link th:href="@{/css/style.css}" rel="stylesheet">
 
@@ -9,11 +8,12 @@
 </head>
 <body>
 <br>
-<a th:href="@{/admin}">Back to admin page</a>
-
+<p>
+  <a th:href="@{/admin}">Back to admin page</a>
+  <a th:href="@{'/plan/excel/' + ${year}}">Export Excel Costs</a>
+</p>
 <div th:each="machine: ${machines}">
-  <a th:href="@{'/plan/'+${year}+'/'+${machine.mname}}" class="a-block">
-    <p th:text="${machine.mname}" /></p>
+  <a th:text="${machine.mname}" th:href="@{'/plan/'+${year}+'/'+${machine.mname}}" class="a-block main-font">
   </a>
 
   <br>

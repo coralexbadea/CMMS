@@ -26,6 +26,10 @@
                         th:if="${#fields.hasErrors('mname')}" th:errors="*{mname}"></label></td>
             </tr>
 
+            <tr>
+                <td><input type="text" th:field="*{code}"> <label
+                        th:if="${#fields.hasErrors('code')}" th:errors="*{code}"></label></td>
+            </tr>
 
             <tr>
                 <td colspan="2"><button type="submit">Save</button></td>
@@ -37,18 +41,24 @@
 <div>
 
     <h4> Components </h4>
-    <p><a th:href="@{'/component/index/'+${machine.mid}}">Edit Components</a></p>
+    <div>
+        <p><a th:href="@{'/component/create/'+${machine.mid}}">Add Component</a>
+        <a th:href="@{'/component/index/'+${machine.mid}}">Edit Components</a></p>
+    </div>
+
     <table  border="1" cellpadding="10">
         <thead>
             <tr>
-                <th>Name</th>
+                <th>Subensemble</th>
+                <th>Component</th>
                 <th>Type</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="component: ${machine.getComponents()}">
-                <td th:text="${component.name}" />
-                <td th:text="${component.componentType.getCtname()}" />
+                <td th:text="${component.subansamblu.sname}"></td>
+                <td th:text="${component.name}"></td>
+                <td th:text="${component.componentType.getCtname()}"></td>
             </tr>
         <tbody>
     </table>

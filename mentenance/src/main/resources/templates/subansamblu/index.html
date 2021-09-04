@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>assignments Information</title>
+</head>
+<body>
+<br>
+<a th:href="@{/admin}">Back to admin page</a>
+
+    <div align="center">
+
+        <form  sec:authorize="hasAnyAuthority('ADMIN')" th:action="@{'/subansamblu/create'}" method="get">
+            <button type="Submit">Add Subansamble</button>
+        </form>
+
+        <table border="1" cellpadding="10">
+            <h2>List of Subansambles</h2>
+            <thead>
+                <tr>
+                    <th>Name</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr th:each="ct : ${subansambluri}">
+                    <td th:text="${ct.sname}">Name</td>
+                    <td sec:authorize="hasAnyAuthority('ADMIN')">
+                        <a th:href="@{'/subansamblu/delete/'+${ct.sid}}">Delete</a>
+                    </td>
+                    <td sec:authorize="hasAnyAuthority('ADMIN')">
+                        <a th:href="@{'/subansamblu/edit/'+${ct.sid}}">Edit</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

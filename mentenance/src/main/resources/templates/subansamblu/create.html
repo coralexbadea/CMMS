@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:width="http://www.w3.org/1999/xhtml"
+      xmlns:height="http://www.w3.org/1999/xhtml">
+<head>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+
+    <title>assignment Form</title>
+</head>
+<body>
+<br>
+<a th:href="@{/admin}">Back to admin page</a>
+
+<form th:action="@{'/subansamblu/create'}"
+      th:object="${subansamblu}" method="post"
+      role="form">
+    <h2>Subansamble Form</h2>
+    <table border="0" cellpadding="10">
+
+
+        <tr>
+            <td><input type="text" th:field="*{sname}" placeholder="Name"> <label
+                    th:if="${#fields.hasErrors('sname')}" th:errors="*{sname}"></label></td>
+        </tr>
+
+        <tr>
+            <td><button type="assignment">Register Subansamble</button></td>
+        </tr>
+    </table>
+
+</form>
+
+
+
+
+</body>
+</html>

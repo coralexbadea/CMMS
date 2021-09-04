@@ -5,7 +5,7 @@
 <head>
     <link th:href="@{/css/style.css}" rel="stylesheet">
 
-    <title>component Form</title>
+    <title>Component Form</title>
 </head>
 <body>
 <br>
@@ -20,6 +20,16 @@
             <td><input type="text" th:field="*{name}" placeholder="Name"> <label
                     th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></label></td>
         </tr>
+
+        <tr>
+            <select th:field="*{subansamblu}">
+                <option th:each="ct : ${subansambluri}"
+                        th:value="${ct.sid}"
+                        th:text="${ct.getSname()}">
+                </option>
+            </select>
+        </tr>
+
         <tr>
             <select th:field="*{componentType}">
                 <option th:each="ct : ${componentTypes}"

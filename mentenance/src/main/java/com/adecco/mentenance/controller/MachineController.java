@@ -1,13 +1,20 @@
 package com.adecco.mentenance.controller;
 
 
+import com.adecco.mentenance.domain.Component;
 import com.adecco.mentenance.domain.Machine;
+import com.adecco.mentenance.domain.Raport;
+import com.adecco.mentenance.domain.Task;
+import com.adecco.mentenance.export.ExcelExport;
+import com.adecco.mentenance.export.ExcelExportFactory;
 import com.adecco.mentenance.service.MachineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -55,10 +62,22 @@ public class MachineController {
     }
 
     @RequestMapping("/delete/{id}")
-    public String deletelaboratory(@PathVariable (name="id") Long id) {
+    public String delete(@PathVariable (name="id") Long id) {
         machineService.delete(id);
         return "redirect:/machine/index";
     }
+
+    @GetMapping(value = "/excel/{id}")
+    public void excel(@PathVariable(name="id")Long id, HttpServletResponse response) throws IOException {
+        Machine m = machineService.findById(id);
+        response.setContentType("application/octet-stream");
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=Componets_"+m.getMname() + ".xlsx";
+        response.setHeader(headerKey, headerValue);
+        ExcelExport<List<Component>> machineExcelExporter = ExcelExportFactory.getExportType("machine", m);
+        machineExcelExporter.export(response);
+    }
+
 
 
 }

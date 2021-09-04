@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Chart</title>
-<!--  <script type="text/javascript" th:src="@{/resources/.../zingchart.min.js}"></script>-->
-  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+
+  <script type="text/javascript" th:src="@{/js/zingchart.min.js}"></script>
+  <script th:inline="javascript">zingchart.MODULESDIR="/js/zingchart.min.js";</script>
+  <!--  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>-->
 </head>
 <body>
   <div id="myChart"></div>
 
-<!--  <ul>-->
+  <!--  <ul>-->
 <!--    <li th:each="label,i in ${labelsX}">-->
 <!--      <p th:text="${i} - ${label}"></p>-->
 <!--    </li>-->

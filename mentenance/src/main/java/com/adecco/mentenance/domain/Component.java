@@ -12,6 +12,8 @@ public class Component {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cid;
     private String name;
+    private boolean active;
+    private String code;
 
     @ManyToOne
     @JoinColumn(name="mid")
@@ -21,9 +23,16 @@ public class Component {
     @JoinColumn(name="ctid")
     private ComponentType componentType;
 
-    @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true, mappedBy = "machine")
-    private Set<Component> tasks = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name="stid")
+    private Subansamblu subansamblu;
 
+    @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true, mappedBy = "component")
+    private Set<Task> tasks = new HashSet<>();
+
+    public Component(){
+        this.active = true;
+    }
     public Long getCid() {
         return cid;
     }
@@ -56,13 +65,39 @@ public class Component {
         this.componentType = componentType;
     }
 
-    public Set<Component> getTasks() {
+    public Set<Task> getTasks() {
         return tasks;
     }
 
-    public void setTasks(Set<Component> tasks) {
+    public void setTasks(Set<Task> tasks) {
         this.tasks = tasks;
     }
 
+    public Subansamblu getSubansamblu() {
+        return subansamblu;
+    }
 
+    public void setSubansamblu(Subansamblu subansamblu) {
+        this.subansamblu = subansamblu;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void generateCode(){
+        this.code = this.machine.getCode() + this.componentType.getCtname().charAt(0) + String.format("%5s", this.cid).replace(" ", "0");
+    }
 }

@@ -4,17 +4,18 @@
       xmlns:height="http://www.w3.org/1999/xhtml">
 <head>
     <link th:href="@{/css/style.css}" rel="stylesheet">
-
     <meta charset="UTF-8">
     <title>Plan</title>
 </head>
 <body>
 <table border="1">
   <thead>
-  <a th:href="@{/admin}">Back to admin page</a>
+  <p>
+      <a th:href="@{/admin}">Back to admin page</a>
+  </p>
 
   <tr>
-      <th>Subansamblu</th>
+      <th>Component</th>
       <th><a th:href="@{'/raport/'+${year}+'/1/'+${mname}}">Ianuarie</a></th>
       <th><a th:href="@{'/raport/'+${year}+'/2/'+${mname}}">Februarie</a></th>
       <th><a th:href="@{'/raport/'+${year}+'/3/'+${mname}}">Martie</a></th>

@@ -186,4 +186,11 @@ public class RaportService {
         }
         return result;
     }
+
+    public List<Task> getTasksForExcel(int year) {
+        List<Raport> raports = raportRepository.findAllByYear(year);
+        List<Task> tasks = raports.stream().map(r->r.getTasks()).flatMap(List::stream)
+                .filter(t->"INLOCUIRE".equals(t.getTaskType().getTtname()) && t.checkIfDone("INLOCUIRE")).collect(Collectors.toList());
+        return tasks;
+    }
 }

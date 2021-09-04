@@ -24,7 +24,9 @@ public class ComponentService {
     public void save(Component c, Long id) {
         Machine machine = machineService.findById(id);
         c.setMachine(machine);
-        componentRepository.save(c);
+        Component c1 = componentRepository.save(c);
+        c1.generateCode();
+        componentRepository.save(c1);
         List<Raport> raports = raportService.findByMachine(machine);
         for(Raport raport : raports){
             Task t = new Task(c, taskTypeService.findByName(" "), raport);
@@ -47,13 +49,17 @@ public class ComponentService {
         Component a = componentRepository.findById(component.getCid()).get();
         a.setComponentType(component.getComponentType());
         a.setName(component.getName());
+        a.setSubansamblu(component.getSubansamblu());
+        a.generateCode();
         return componentRepository.save(a);
     }
 
     @Transactional
     public void delete(Long id) {
-
-        componentRepository.deleteById(id);
+        Component c = componentRepository.getById(id);
+        c.setActive(!c.isActive());
+        componentRepository.save(c);
+        //componentRepository.deleteById(id);
     }
     public List<Component> listAllByMachineId(Long id) {
         return componentRepository.findAllByMachine_Mid(id);

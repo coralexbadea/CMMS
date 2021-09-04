@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html  xmlns:th="http://www.thymeleaf.org"
        xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+
 <head>
     <link th:href="@{/css/style.css}" rel="stylesheet">
-
     <meta charset="UTF-8">
+    <script src="/js/vue.js"></script>
+
     <title>Show Rapport</title>
 </head>
 <body>
@@ -17,8 +20,8 @@
 </div>
 
 
-    <p th:text="'Rapport for' +${raport.getMonth()} + ' ' + ${raport.getYear()}"></p>
-    <form th:action="@{'/raport/save'}"
+    <p th:text="'Rapport for ' +${raport.getMonth()} + ' ' + ${raport.getYear()}"></p>
+    <form th:action="@{'/raport/save/'+${sid}}"
           th:object="${raport}" method="post">
 
         <p><input type="hidden" th:field="*{rid}"  /></p>
@@ -26,12 +29,16 @@
         <p><input type="hidden" th:field="*{year}"  /></p>
         <p><input type="hidden" th:field="*{machine}"  /></p>
 
-        <table border="1">
+        <table border="1" id="table">
             <thead>
                 <tr>
                     <th>Tip </th>
-                    <th>Subansamblu</th>
+                    <th>Componenta</th>
                     <th>Lucrari conf. plan anual</th>
+                    <th>Cantitate</th>
+                    <span sec:authorize="isAuthenticated()">
+                    <th>Pret</th>
+                    </span>
                     <th>Actiune 1</th>
                     <th>Actiune 2</th>
                     <th>Actiune 3</th>
@@ -42,11 +49,13 @@
                 </tr>
             </thead>
             <tbody>
-            <tr th:each="task, i : ${raport.tasks}">
+            <tr th:each="task, i : ${raport.tasks}" th:style="${task.component.subansamblu.sid != id || (!task.component.active)}? 'display: none;'" >
+
 <!--                <p><input type="hidden" th:field="*{tasks[__${i.index}__].taskType.ttid}"  /></p>-->
 <!--                <td>-->
 <!--                    <input type="text" th:field="*{tasks[__${i.index}__].taskType.ttid}"  />-->
 <!--                </td>-->
+
                 <td>
                     <p th:text="*{tasks[__${i.index}__].component.componentType.getCtname()}"></p>
                 </td>
@@ -65,6 +74,22 @@
                         <p th:text="*{tasks[__${i.index}__].taskType.ttname}"></p>
                     </span>
                 </td>
+
+                <td>
+                    <span sec:authorize="isAuthenticated()">
+                            <input type="text" th:field="*{tasks[__${i.index}__].quantity}"  />
+                        </span>
+                    <span sec:authorize="isAnonymous()">
+                            <p th:text="*{tasks[__${i.index}__].quantity}"></p>
+                    </span>
+                </td>
+
+                <span sec:authorize="isAuthenticated()">
+                    <td>
+                        <input type="text" th:field="*{tasks[__${i.index}__].price}"  />
+                    </td>
+                </span>
+
                 <td>
                     <select th:field="*{tasks[__${i.index}__].action1}">
                         <option th:each="tt : ${taskTypes}" th:value="${tt.ttname}" th:text="${tt.ttname}">

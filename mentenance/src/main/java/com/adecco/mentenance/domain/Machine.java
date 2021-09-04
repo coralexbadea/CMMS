@@ -11,11 +11,17 @@ public class Machine {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long mid;
     private String mname;
+    private boolean active;
+    private String code;
 
-    @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true, mappedBy = "machine")
+    public Machine(){
+        this.active = true;
+    }
+
+    @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true, mappedBy = "machine")
     private Set<Component> components = new HashSet<>();
 
-    @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = false, mappedBy = "machine")
+    @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true, mappedBy = "machine")
     private Set<Component> raports = new HashSet<>();
 
     public Long getMid() {
@@ -48,5 +54,21 @@ public class Machine {
 
     public void setRaports(Set<Component> raports) {
         this.raports = raports;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 }

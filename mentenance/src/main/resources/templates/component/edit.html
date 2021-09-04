@@ -4,14 +4,14 @@
     <link th:href="@{/css/style.css}" rel="stylesheet">
 
     <meta charset="ISO-8859-1">
-    <title>Edit Component</title>
+    <title>Edit component</title>
 </head>
 <body>
 <br>
 <a th:href="@{/admin}">Back to admin page</a>
 
 <div align="center">
-    <h1>Edit Component</h1>
+    <h1>Edit component</h1>
     <br />
     <form th:action="@{'/component/edit/'+${mid}}" th:object="${component}"
           method="post">
@@ -26,12 +26,14 @@
                 <option th:each="ct : ${componentTypes}" th:value="${ct.ctid}" th:text="${ct.ctname}">
                 </option>
             </select>
+            <select th:field="*{subansamblu}",required="false">
+                <option th:each="ct : ${subansambluri}" th:value="${ct.sid}" th:text="${ct.sname}">
+                </option>
+            </select>
             <tr>
                 <td><input type="text" th:field="*{name}" placeholder="Name"> <label
                         th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></label></td>
             </tr>
-
-
 
             <tr>
                 <td colspan="2"><button type="submit">Save</button></td>
@@ -39,5 +41,7 @@
         </table>
     </form>
 </div>
+
+
 </body>
 </html>

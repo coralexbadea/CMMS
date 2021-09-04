@@ -19,9 +19,7 @@ import java.util.List;
 import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 import java.util.stream.Stream;
 
 
@@ -31,52 +29,92 @@ public class PdfService {
     FileSystemStorageService storageService;
 
     public void createPdf(String filename, Raport raport) throws IOException, DocumentException, URISyntaxException {
-        Document document = new Document();
+        Document document = new Document(PageSize.A4.rotate());
         PdfWriter.getInstance(document, new FileOutputStream(filename+".pdf"));
-
         document.open();
 
-        Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
-        document.add(new Paragraph(filename, font));
-        document.add( Chunk.NEWLINE );
-        document.add( Chunk.NEWLINE );
-
-        PdfPTable table = new PdfPTable(7);
-        String[] strings = {"Subansamblu", "Lucrari conf. plan anual", "Actiune 1",
-                "Actiune 2", "Actiune 3", "Personal Intern", "Data"};
-        addTableHeader(table, strings);
-        for(Task task: raport.getTasks()){
-            addCustomRows(table,task);
-        }
-        document.add(table);
-
+        Font font1 = FontFactory.getFont(FontFactory.COURIER, 25, BaseColor.BLACK);
+        Font font = FontFactory.getFont(FontFactory.COURIER, 18, BaseColor.BLACK);
+        document.add(new Paragraph(filename, font1));
         document.add( Chunk.NEWLINE );
         document.add( Chunk.NEWLINE );
 
         for(Task task: raport.getTasks()){
             List<Path> paths = storageService.getImagePaths(task.getTid());
             if(paths.size() != 0){
-                document.add( new Paragraph( task.getComponent().getName()) );
+//
+                document.add( new Paragraph( "Subansamblu: "+task.getComponent().getSubansamblu().getSname(),font) );
+                document.add( new Paragraph( "Componenta: "+task.getComponent().getName(),font) );
+                document.add( new Paragraph( "Lucrari conf. plan anual: "+task.getTaskType().getTtname(),font) );
+                document.add( new Paragraph( "Actiune 1: "+task.getAction1(),font) );
+                document.add( new Paragraph( "Actiune 2: "+task.getAction2(),font) );
+                document.add( new Paragraph( "Actiune 3: "+task.getAction3(),font) );
+                document.add( new Paragraph( "Personal Intern: "+task.getPintern(),font) );
+                document.add( new Paragraph( "Observatii: "+task.getObsWorker(),font) );
+                document.add( new Paragraph( "Lucrari conf. situatie reala: "+task.getRealSituation(),font) );
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd LLLL yyyy");
+                String date = task.getDate()==null? "NULL" : task.getDate().format(formatter);
+                document.add( new Paragraph( "Data: "+date,font) );
+                document.add(new Paragraph("Images:",font));
                 for(Path path: paths){
-                addImage(document, path);
-              }
+                    addImage(document, path);
+                }
+                document.newPage();
             }
             document.add( Chunk.NEWLINE );
         }
-
-        table = new PdfPTable(2);
-        String[] strings1 = {"Subansamblu", "Observatii Lucrari"};
-        addTableHeader(table, strings1);
-        for(Task task: raport.getTasks()){
-            table.addCell(task.getComponent().getName());
-            table.addCell(task.getObsWorker());
-        }
-        document.newPage();
-        document.add( new Paragraph( "Observatii" ));
         document.add( Chunk.NEWLINE );
-        document.add(table);
         document.close();
     }
+
+//
+//    public void createPdf(String filename, Raport raport) throws IOException, DocumentException, URISyntaxException {
+//        Document document = new Document(PageSize.A4.rotate());
+//        PdfWriter.getInstance(document, new FileOutputStream(filename+".pdf"));
+//        document.open();
+//
+//        Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
+//        document.add(new Paragraph(filename, font));
+//        document.add( Chunk.NEWLINE );
+//        document.add( Chunk.NEWLINE );
+//
+//        PdfPTable table = new PdfPTable(7);
+//        String[] strings = {"Subansamblu", "Lucrari conf. plan anual", "Actiune 1",
+//                "Actiune 2", "Actiune 3", "Personal Intern", "Data"};
+//        addTableHeader(table, strings);
+//        for(Task task: raport.getTasks()){
+//            addCustomRows(table,task);
+//        }
+//        document.add(table);
+//
+//        document.add( Chunk.NEWLINE );
+//        document.add( Chunk.NEWLINE );
+//
+//        for(Task task: raport.getTasks()){
+//            List<Path> paths = storageService.getImagePaths(task.getTid());
+//            if(paths.size() != 0){
+//                document.newPage();
+//                document.add( new Paragraph( task.getComponent().getName()) );
+//                for(Path path: paths){
+//                addImage(document, path);
+//              }
+//            }
+//            document.add( Chunk.NEWLINE );
+//        }
+//
+//        table = new PdfPTable(2);
+//        String[] strings1 = {"Subansamblu", "Observatii Lucrari"};
+//        addTableHeader(table, strings1);
+//        for(Task task: raport.getTasks()){
+//            table.addCell(task.getComponent().getName());
+//            table.addCell(task.getObsWorker());
+//        }
+//        document.newPage();
+//        document.add( new Paragraph( "Observatii" ));
+//        document.add( Chunk.NEWLINE );
+//        document.add(table);
+//        document.close();
+//    }
 
     private void addTableHeader(PdfPTable table, String[] strings) {
         Stream<String> stream1 = Stream.of(strings);
@@ -93,7 +131,9 @@ public class PdfService {
     private void addImage(Document document, Path path) throws DocumentException, IOException {
         //It does in work with relative path as String, we need relative path as Path type.
         Image img = Image.getInstance(path.toAbsolutePath().toString());
-        img.scalePercent(10);
+        float scalerH = ((document.getPageSize().getHeight() - document.topMargin()
+                - document.bottomMargin() - 20) / img.getHeight()) * 100;
+        img.scalePercent(scalerH);
         document.add(img);
     }
 

@@ -4,7 +4,7 @@
 <head>
     <link th:href="@{/css/style.css}" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Rapport machines</title>
+    <title>Masini</title>
 </head>
 <body>
 <br>
@@ -15,8 +15,8 @@
 <!--        <a th:href="@{/admin}">Log in</a>-->
 <!--    </div>-->
     <div th:each="machine: ${machines}">
-        <a th:href="@{'/raport/'+${year}+'/'+${month}+'/'+${machine.mname}}" class="a-block main-font">
-            <p th:text="${machine.mname}" /></p>
+        <a th:href="@{'/raport/'+${year}+'/'+${month}+'/'+${machine.mname}}" class="a-block">
+            <h1 th:text="${machine.mname}"></h1>
         </a>
         <br>
     </div>

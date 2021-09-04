@@ -3,7 +3,6 @@ package com.adecco.mentenance.controller;
 import com.adecco.mentenance.domain.*;
 import com.adecco.mentenance.export.ExcelExport;
 import com.adecco.mentenance.export.ExcelExportFactory;
-import com.adecco.mentenance.export.RaportExcelExporter;
 import com.adecco.mentenance.service.*;
 import com.itextpdf.text.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,37 +37,50 @@ public class RaportController {
     PdfService pdfService;
     @Autowired
     ExcelExportFactory excelExportFactory;
+    @Autowired
+    SubansambluService subansambluService;
     @GetMapping(value = "/{year}/{month}")
     public ModelAndView showMachines(@PathVariable(name="year")int year, @PathVariable(name="month")String month) {
         ModelAndView modelAndView = new ModelAndView();
-        List<Machine> machines = machineService.listAll();
+        List<Machine> machines = machineService.listAllActive();
         modelAndView.addObject("machines", machines);
         modelAndView.addObject("year", year);
         modelAndView.addObject("month", month);
         modelAndView.setViewName("raport/machines");
         return modelAndView;
     }
-
     @GetMapping(value = "/{year}/{month}/{mname}")
-    public ModelAndView showRaport(@PathVariable(name="year")int year, @PathVariable(name="month")String month,@PathVariable(name="mname")String mname) {
+    public ModelAndView showSubsansambluri(@PathVariable(name="year")int year, @PathVariable(name="month")String month, @PathVariable(name="mname")String mname) {
+        ModelAndView modelAndView = new ModelAndView();
+        List<Subansamblu> subansambluri = subansambluService.listAllByMachine(mname);
+        modelAndView.addObject("subansambluri", subansambluri);
+        modelAndView.addObject("mname", mname);
+        modelAndView.addObject("year", year);
+        modelAndView.addObject("month", month);
+        modelAndView.setViewName("raport/subansambluri");
+        return modelAndView;
+    }
+
+    @GetMapping(value = "/{year}/{month}/{mname}/{sid}")
+    public ModelAndView showRaport(@PathVariable(name="year")int year, @PathVariable(name="month")String month,@PathVariable(name="mname")String mname, @PathVariable(name="sid")Long sid) {
         ModelAndView modelAndView = new ModelAndView();
         Raport raport = raportService.getRaport(year, month, mname);
         List<TaskType> taskTypes = taskTypeService.listAll();
-
+        modelAndView.addObject("id", sid);
         modelAndView.addObject("raport", raport);
         modelAndView.addObject("taskTypes", taskTypes);
         modelAndView.setViewName("raport/show");
         return modelAndView;
     }
 
-    @PostMapping(value = "/save")
-    public String edit(@ModelAttribute("raport") Raport raport) {
+    @PostMapping(value = "/save/{sid}")
+    public String edit(@ModelAttribute("raport") Raport raport, @PathVariable Long sid) {
         List<Task> tasks = raport.getTasks();
         raportService.updateTasksDate(tasks);
         raport.setTasks(tasks);
         raportService.saveEdit(raport);
         return ("redirect:/raport/"+raport.getYear()+"/"
-                +raport.getMonth()+"/"+raport.getMachine().getMname());
+                +raport.getMonth()+"/"+raport.getMachine().getMname()+"/"+sid);
     }
 
     @RequestMapping("/delete/{id}")
@@ -108,7 +120,6 @@ public class RaportController {
 
         ExcelExport<Raport> raportExcelExporter = ExcelExportFactory.getExportType("raport", raport);
         raportExcelExporter.export(response);
-
     }
 
     @GetMapping(value="/chart/{id}")

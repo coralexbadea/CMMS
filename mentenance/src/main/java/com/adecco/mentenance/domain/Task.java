@@ -1,6 +1,8 @@
 package com.adecco.mentenance.domain;
 
 import javax.persistence.*;
+import javax.swing.*;
+import javax.validation.constraints.Null;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
@@ -23,7 +25,8 @@ public class Task {
     @ManyToOne
     @JoinColumn(name="cid")
     private Component component;
-
+    private String quantity;
+    private String price;
     private String action1;
     private String action2;
     private String action3;
@@ -143,4 +146,38 @@ public class Task {
         this.date = date;
     }
 
+    public String getQuantity() {
+        if (quantity != null )
+            return quantity;
+        return "";
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getPrice() {
+        if (price != null)
+            return price;
+        return "";
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getTotalPrice(){
+        try {
+            return Integer.toString(Integer.parseInt(this.quantity) * Integer.parseInt(this.price));
+        }
+        catch (NumberFormatException nfe){
+            return "";
+        }
+    }
+
+    public boolean checkIfDone(String action) {
+        return (action1.equals(action) ||
+                action2.equals(action) ||
+                action3.equals(action));
+    }
 }

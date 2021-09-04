@@ -22,6 +22,11 @@
         </tr>
 
         <tr>
+            <td><input type="text" th:field="*{code}" placeholder="Code"> <label
+                    th:if="${#fields.hasErrors('code')}" th:errors="*{code}"></label></td>
+        </tr>
+
+        <tr>
             <td><button type="assignment">Register Machine</button></td>
         </tr>
     </table>

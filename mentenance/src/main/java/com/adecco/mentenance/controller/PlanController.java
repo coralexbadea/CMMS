@@ -1,9 +1,8 @@
 package com.adecco.mentenance.controller;
 
-import com.adecco.mentenance.domain.Component;
-import com.adecco.mentenance.domain.ComponentType;
-import com.adecco.mentenance.domain.Machine;
-import com.adecco.mentenance.domain.Raport;
+import com.adecco.mentenance.domain.*;
+import com.adecco.mentenance.export.ExcelExport;
+import com.adecco.mentenance.export.ExcelExportFactory;
 import com.adecco.mentenance.service.MachineService;
 import com.adecco.mentenance.service.RaportService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +11,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -36,7 +40,7 @@ public class PlanController {
     @GetMapping(value = "/{year}")
     public ModelAndView showMachines(@PathVariable(name="year")int year) {
         ModelAndView modelAndView = new ModelAndView();
-        List<Machine> machines = machineService.listAll();
+        List<Machine> machines = machineService.listAllActive();
         modelAndView.addObject("machines", machines);
         modelAndView.addObject("year", year);
         modelAndView.setViewName("plan/machines");
@@ -72,6 +76,18 @@ public class PlanController {
         raportService.deletePlan(year);
         return "redirect:/plan/index";
     }
+
+    @GetMapping(value = "/excel/{year}")
+    public void excel(@PathVariable(name="year")int year, HttpServletResponse response) throws IOException {
+        List<Task> tasks = raportService.getTasksForExcel(year);
+        response.setContentType("application/octet-stream");
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=Costs_"+year + ".xlsx";
+        response.setHeader(headerKey, headerValue);
+        ExcelExport<List<Raport>> planExcelExporter = ExcelExportFactory.getExportType("costs", tasks);
+        planExcelExporter.export(response);
+    }
+
 
 //    @GetMapping("/create")
 //    public ModelAndView create(){

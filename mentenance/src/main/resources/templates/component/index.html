@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html  xmlns:th="http://www.thymeleaf.org"
-       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<html  xmlns:th="http://www.thymeleaf.org">
 <head>
     <link th:href="@{/css/style.css}" rel="stylesheet">
 
     <meta charset="UTF-8">
-    <title>components Information</title>
+    <title>Components Information</title>
 </head>
 <body>
 <br>
@@ -21,21 +20,28 @@
         <thead>
         <tr>
             <th>Tip</th>
+            <th>Subensemble</th>
             <th>Name</th>
+            <th>Code</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="component : ${components}">
             <td th:text="${component.componentType.ctname}"></td>
+            <td th:text="${component.subansamblu.sname}"></td>
             <td th:text="${component.name}"></td>
+            <td th:text="${component.code}"></td>
 
             <td>
                 <a th:href="@{'/component/edit/'+${component.cid}}">Edit</a>
             </td>
-
             <td>
-                <a th:href="@{'/component/delete/'+${id}+'/'+${component.cid}}">Delete</a>
+                <a th:href="@{'/component/delete/'+${id}+'/'+${component.cid}}"
+                   th:text="${component.active} ? 'Deactivate' : 'Activate'" ></a>
             </td>
+<!--            <td>-->
+<!--                <a th:href="@{'/component/delete/'+${id}+'/'+${component.cid}}">Delete</a>-->
+<!--            </td>-->
 
         </tr>
         </tbody>

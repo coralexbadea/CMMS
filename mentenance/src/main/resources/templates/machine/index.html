@@ -21,17 +21,23 @@
             <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Code</th>
                 </tr>
             </thead>
             <tbody>
 
                 <tr th:each="machine : ${machines}">
                     <td th:text="${machine.mname}">Name</td>
-                    <td sec:authorize="hasAnyAuthority('ADMIN')">
-                        <a th:href="@{'/machine/delete/'+${machine.mid}}">Delete</a>
+                    <td th:text="${machine.code}">Code</td>
+                    <td>
+                        <a th:href="@{'/machine/delete/'+${machine.mid}}"
+                           th:text="${machine.active} ? 'Deactivate' : 'Activate'" ></a>
                     </td>
-                    <td sec:authorize="hasAnyAuthority('ADMIN')">
+                    <td>
                         <a th:href="@{'/machine/edit/'+${machine.mid}}">Edit</a>
+                    </td>
+                    <td>
+                        <a th:href="@{'/machine/excel/'+${machine.mid}}">Export Components</a>
                     </td>
                 </tr>
             </tbody>

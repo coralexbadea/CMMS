@@ -20,7 +20,7 @@ public class Raport {
     @JoinColumn(name="mid")
     private Machine machine;
 
-    @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true, mappedBy = "raport")
+    @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true, mappedBy = "raport")
     private List<Task> tasks = new ArrayList<>();
 
     public Raport(int year, String month) {
