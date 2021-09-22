@@ -168,9 +168,9 @@ public class Task {
 
     public String getTotalPrice(){
         try {
-            return Integer.toString(Integer.parseInt(this.quantity) * Integer.parseInt(this.price));
+            return Double.toString(Integer.parseInt(this.quantity) * Double.parseDouble(this.price));
         }
-        catch (NumberFormatException nfe){
+        catch (Exception e){
             return "";
         }
     }

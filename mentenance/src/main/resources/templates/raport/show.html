@@ -12,11 +12,14 @@
 </head>
 <body>
 <br>
+<div  sec:authorize="isAnonymous()" class="outer">
+    <a th:href="@{'/'}">Inapoi</a>
+</div>
 <div  sec:authorize="isAuthenticated()" class="outer">
+    <a th:href="@{/admin}">Back to admin page</a>
     <a th:href="@{'/raport/pdf/' + ${raport.rid}}">Download PDF</a>
     <a th:href="@{'/raport/excel/' + ${raport.rid}}">Export as Excel</a>
     <a th:href="@{'/raport/chart/' + ${raport.rid}}">See chart</a>
-
 </div>
 
 
@@ -28,6 +31,7 @@
         <p><input type="hidden" th:field="*{month}"  /></p>
         <p><input type="hidden" th:field="*{year}"  /></p>
         <p><input type="hidden" th:field="*{machine}"  /></p>
+
 
         <table border="1" id="table">
             <thead>
@@ -64,7 +68,7 @@
                 </td>
                 <td>
                     <span sec:authorize="isAuthenticated()">
-                        <select th:field="*{tasks[__${i.index}__].taskType.ttid}",required="false">
+                        <select th:field="*{tasks[__${i.index}__].taskType.ttid}" required="false">
                             <option th:each="tt : ${taskTypes}" th:value="${tt.ttid}" th:text="${tt.ttname}">
                             </option>
                         </select>
@@ -80,7 +84,7 @@
                             <input type="text" th:field="*{tasks[__${i.index}__].quantity}"  />
                         </span>
                     <span sec:authorize="isAnonymous()">
-                            <p th:text="*{tasks[__${i.index}__].quantity}"></p>
+                        <p><input type="text" th:field="*{tasks[__${i.index}__].quantity}"  readonly/></p>
                     </span>
                 </td>
 
@@ -89,6 +93,11 @@
                         <input type="text" th:field="*{tasks[__${i.index}__].price}"  />
                     </td>
                 </span>
+
+                <span sec:authorize="isAnonymous()">
+                    <input type="hidden" th:field="*{tasks[__${i.index}__].price}"  />
+                </span>
+
 
                 <td>
                     <select th:field="*{tasks[__${i.index}__].action1}">
@@ -121,6 +130,7 @@
                     <a th:href="@{'/task/image/'+*{tasks[__${i.index}__].tid}}">View</a>
                 </td>
                 <p><input type="hidden" th:field="*{tasks[__${i.index}__].tid}"  /></p>
+                <p><input type="hidden" th:field="*{tasks[__${i.index}__].date}"  /></p>
                 <p><input type="hidden" th:field="*{tasks[__${i.index}__].raport}"  /></p>
                 <p><input type="hidden" th:field="*{tasks[__${i.index}__].component}"  /></p>
             </tr>

@@ -1,10 +1,8 @@
 package com.adecco.mentenance.domain;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name="raports")
@@ -78,4 +76,10 @@ public class Raport {
     }
 
 
+    public List<Task> getTodoTasks() {
+        return this.getTasks().stream()
+                .filter(s -> s.getTaskType().getTtid()!=1)
+                .sorted(Comparator.comparing(s->s.getComponent().getSubansamblu().getSname()))
+                .collect(Collectors.toList());
+    }
 }

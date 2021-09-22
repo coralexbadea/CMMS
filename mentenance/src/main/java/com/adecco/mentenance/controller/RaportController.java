@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -25,6 +26,10 @@ import java.util.stream.Collectors;
 @Controller
 @RequestMapping("/raport")
 public class RaportController {
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        binder.setAutoGrowCollectionLimit(768);
+    }
     @Autowired
     MachineService machineService;
     @Autowired

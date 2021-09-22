@@ -1,0 +1,33 @@
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.7-rc-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.7-rc-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.7-rc-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.7-rc-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.7-rc-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.7-rc-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.7-rc-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.7-rc-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.7-rc-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+# Time: 2021-09-13T09:16:13.044855Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:   906
+# Query_time: 55.159534  Lock_time: 0.000000 Rows_sent: 22620  Rows_examined: 135776
+use mentenance;
+SET timestamp=4294966938;
+select tasks0_.ttid as ttid14_6_0_, tasks0_.tid as tid1_6_0_, tasks0_.tid as tid1_6_1_, tasks0_.action1 as action2_6_1_, tasks0_.action2 as action3_6_1_, tasks0_.action3 as action4_6_1_, tasks0_.cid as cid12_6_1_, tasks0_.date as date5_6_1_, tasks0_.obs_worker as obs_work6_6_1_, tasks0_.pextern as pextern7_6_1_, tasks0_.pintern as pintern8_6_1_, tasks0_.price as price9_6_1_, tasks0_.quantity as quantit10_6_1_, tasks0_.rid as rid13_6_1_, tasks0_.real_situation as real_si11_6_1_, tasks0_.ttid as ttid14_6_1_, component1_.cid as cid1_0_2_, component1_.active as active2_0_2_, component1_.code as code3_0_2_, component1_.ctid as ctid5_0_2_, component1_.mid as mid6_0_2_, component1_.name as name4_0_2_, component1_.stid as stid7_0_2_, componentt2_.ctid as ctid1_1_3_, componentt2_.ctname as ctname2_1_3_, machine3_.mid as mid1_2_4_, machine3_.active as active2_2_4_, machine3_.code as code3_2_4_, machine3_.mname as mname4_2_4_, subansambl4_.sid as sid1_5_5_, subansambl4_.sname as sname2_5_5_, raport5_.rid as rid1_3_6_, raport5_.mid as mid4_3_6_, raport5_.month as month2_3_6_, raport5_.year as year3_3_6_, machine6_.mid as mid1_2_7_, machine6_.active as active2_2_7_, machine6_.code as code3_2_7_, machine6_.mname as mname4_2_7_ from tasks tasks0_ left outer join components component1_ on tasks0_.cid=component1_.cid left outer join component_types componentt2_ on component1_.ctid=componentt2_.ctid left outer join machines machine3_ on component1_.mid=machine3_.mid left outer join subansambles subansambl4_ on component1_.stid=subansambl4_.sid left outer join raports raport5_ on tasks0_.rid=raport5_.rid left outer join machines machine6_ on raport5_.mid=machine6_.mid where tasks0_.ttid=1;

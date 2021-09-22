@@ -1,0 +1,1432 @@
+2021-08-31T13:30:16.527669Z 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2021-08-31T13:30:16.530681Z 0 [Note] InnoDB: Uses event mutexes
+2021-08-31T13:30:16.531679Z 0 [Note] InnoDB: _mm_lfence() and _mm_sfence() are used for memory barrier
+2021-08-31T13:30:16.533685Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-08-31T13:30:16.535690Z 0 [Note] InnoDB: Adjusting innodb_buffer_pool_instances from 8 to 1 since innodb_buffer_pool_size is less than 1024 MiB
+2021-08-31T13:30:16.538705Z 0 [Note] InnoDB: Number of pools: 1
+2021-08-31T13:30:16.539708Z 0 [Note] InnoDB: Not using CPU crc32 instructions
+2021-08-31T13:30:16.555754Z 0 [Note] InnoDB: Initializing buffer pool, total size = 8M, instances = 1, chunk size = 8M
+2021-08-31T13:30:16.556754Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-08-31T13:30:16.568786Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-08-31T13:30:16.749263Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-08-31T13:30:16.751229Z 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-08-31T13:30:16.766317Z 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2021-08-31T13:30:16.768328Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2021-08-31T13:30:16.769329Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2021-08-31T13:30:16.770333Z 0 [Note] InnoDB: Waiting for purge to start
+2021-08-31T13:30:16.824424Z 0 [Note] InnoDB: 5.7.7 started; log sequence number 2389882
+2021-08-31T13:30:16.825484Z 0 [Note] InnoDB: Loading buffer pool(s) from .\\ib_buffer_pool
+2021-08-31T13:30:16.825484Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2021-08-31T13:30:16.837460Z 0 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: 94547308-0a5f-11ec-8cc7-9c7bef6d7f71.
+2021-08-31T13:30:16.840465Z 0 [Note] InnoDB: Buffer pool(s) load completed at 210831 16:30:16
+2021-08-31T13:30:16.848487Z 0 [Warning] Failed to setup SSL
+2021-08-31T13:30:16.848487Z 0 [Warning] SSL error: SSL context is not usable without certificate and private key
+2021-08-31T13:30:16.849490Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-08-31T13:30:16.851495Z 0 [Note] IPv6 is available.
+2021-08-31T13:30:16.851495Z 0 [Note]   - '::' resolves to '::';
+2021-08-31T13:30:16.852498Z 0 [Note] Server socket created on IP: '::'.
+2021-08-31T13:30:16.931750Z 0 [Note] Event Scheduler: Loaded 0 events
+2021-08-31T13:30:16.932750Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: ready for connections.
+Version: '5.7.7-rc-log'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2021-08-31T13:30:17.759919Z 4 [Note] Access denied for user 'root'@'localhost' (using password: NO)
+2021-08-31T13:30:44.281642Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Normal shutdown
+
+2021-08-31T13:30:44.283655Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2021-08-31T13:30:44.284653Z 0 [Note] Shutting down slave threads
+2021-08-31T13:30:44.285662Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2021-08-31T13:30:44.286658Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2021-08-31T13:30:44.287659Z 0 [Note] Binlog end
+2021-08-31T13:30:44.289665Z 0 [Note] Shutting down plugin 'ngram'
+2021-08-31T13:30:44.290670Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2021-08-31T13:30:44.291673Z 0 [Note] Shutting down plugin 'partition'
+2021-08-31T13:30:44.291673Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2021-08-31T13:30:44.292674Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2021-08-31T13:30:44.293676Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2021-08-31T13:30:44.293676Z 0 [Note] Shutting down plugin 'MyISAM'
+2021-08-31T13:30:44.294680Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2021-08-31T13:30:44.295682Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2021-08-31T13:30:44.296685Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2021-08-31T13:30:44.296685Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2021-08-31T13:30:44.297687Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2021-08-31T13:30:44.298689Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2021-08-31T13:30:44.299692Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2021-08-31T13:30:44.300695Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2021-08-31T13:30:44.300695Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2021-08-31T13:30:44.301706Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2021-08-31T13:30:44.302705Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2021-08-31T13:30:44.303702Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2021-08-31T13:30:44.304705Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2021-08-31T13:30:44.304705Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2021-08-31T13:30:44.305708Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2021-08-31T13:30:44.306710Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2021-08-31T13:30:44.307713Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2021-08-31T13:30:44.307713Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2021-08-31T13:30:44.308716Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2021-08-31T13:30:44.309717Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2021-08-31T13:30:44.310721Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2021-08-31T13:30:44.310721Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2021-08-31T13:30:44.311723Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2021-08-31T13:30:44.312726Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2021-08-31T13:30:44.313729Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2021-08-31T13:30:44.313729Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2021-08-31T13:30:44.314733Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2021-08-31T13:30:44.315735Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2021-08-31T13:30:44.315735Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2021-08-31T13:30:44.316738Z 0 [Note] Shutting down plugin 'InnoDB'
+2021-08-31T13:30:44.317740Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2021-08-31T13:30:44.318742Z 0 [Note] InnoDB: Starting shutdown...
+2021-08-31T13:30:44.420018Z 0 [Note] InnoDB: Dumping buffer pool(s) to .\\ib_buffer_pool
+2021-08-31T13:30:44.425025Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 210831 16:30:44
+2021-08-31T13:30:45.130909Z 0 [Note] InnoDB: Shutdown completed; log sequence number 2390298
+2021-08-31T13:30:45.132915Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2021-08-31T13:30:45.132915Z 0 [Note] Shutting down plugin 'MEMORY'
+2021-08-31T13:30:45.133916Z 0 [Note] Shutting down plugin 'CSV'
+2021-08-31T13:30:45.134919Z 0 [Note] Shutting down plugin 'sha256_password'
+2021-08-31T13:30:45.134919Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2021-08-31T13:30:45.135926Z 0 [Note] Shutting down plugin 'binlog'
+2021-08-31T13:30:45.140935Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Shutdown complete
+
+2021-08-31T13:30:51.581136Z 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2021-08-31T13:30:51.585158Z 0 [Note] InnoDB: Uses event mutexes
+2021-08-31T13:30:51.586149Z 0 [Note] InnoDB: _mm_lfence() and _mm_sfence() are used for memory barrier
+2021-08-31T13:30:51.587151Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-08-31T13:30:51.588155Z 0 [Note] InnoDB: Adjusting innodb_buffer_pool_instances from 8 to 1 since innodb_buffer_pool_size is less than 1024 MiB
+2021-08-31T13:30:51.590159Z 0 [Note] InnoDB: Number of pools: 1
+2021-08-31T13:30:51.591165Z 0 [Note] InnoDB: Not using CPU crc32 instructions
+2021-08-31T13:30:51.606168Z 0 [Note] InnoDB: Initializing buffer pool, total size = 8M, instances = 1, chunk size = 8M
+2021-08-31T13:30:51.608223Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-08-31T13:30:51.622259Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-08-31T13:30:51.786679Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-08-31T13:30:51.788658Z 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-08-31T13:30:51.806759Z 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2021-08-31T13:30:51.809773Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2021-08-31T13:30:51.810771Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2021-08-31T13:30:51.811773Z 0 [Note] InnoDB: Waiting for purge to start
+2021-08-31T13:30:51.864912Z 0 [Note] InnoDB: 5.7.7 started; log sequence number 2390298
+2021-08-31T13:30:51.866869Z 0 [Note] InnoDB: Loading buffer pool(s) from .\\ib_buffer_pool
+2021-08-31T13:30:51.866869Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2021-08-31T13:30:51.879898Z 0 [Warning] Failed to setup SSL
+2021-08-31T13:30:51.880901Z 0 [Warning] SSL error: SSL context is not usable without certificate and private key
+2021-08-31T13:30:51.881903Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-08-31T13:30:51.882909Z 0 [Note] IPv6 is available.
+2021-08-31T13:30:51.883915Z 0 [Note]   - '::' resolves to '::';
+2021-08-31T13:30:51.884912Z 0 [Note] Server socket created on IP: '::'.
+2021-08-31T13:30:51.895941Z 0 [Note] InnoDB: Buffer pool(s) load completed at 210831 16:30:51
+2021-08-31T13:30:51.938053Z 0 [Note] Event Scheduler: Loaded 0 events
+2021-08-31T13:30:51.939108Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: ready for connections.
+Version: '5.7.7-rc-log'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2021-08-31T13:30:54.125889Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Normal shutdown
+
+2021-08-31T13:30:54.127918Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2021-08-31T13:30:54.128895Z 0 [Note] Shutting down slave threads
+2021-08-31T13:30:54.128895Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2021-08-31T13:30:54.129898Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2021-08-31T13:30:54.130900Z 0 [Note] Binlog end
+2021-08-31T13:30:54.132907Z 0 [Note] Shutting down plugin 'ngram'
+2021-08-31T13:30:54.133911Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2021-08-31T13:30:54.134948Z 0 [Note] Shutting down plugin 'partition'
+2021-08-31T13:30:54.134948Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2021-08-31T13:30:54.135938Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2021-08-31T13:30:54.136943Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2021-08-31T13:30:54.136943Z 0 [Note] Shutting down plugin 'MyISAM'
+2021-08-31T13:30:54.137945Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2021-08-31T13:30:54.138946Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2021-08-31T13:30:54.138946Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2021-08-31T13:30:54.139949Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2021-08-31T13:30:54.140951Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2021-08-31T13:30:54.141955Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2021-08-31T13:30:54.141955Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2021-08-31T13:30:54.142961Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2021-08-31T13:30:54.143964Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2021-08-31T13:30:54.143964Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2021-08-31T13:30:54.144969Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2021-08-31T13:30:54.145977Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2021-08-31T13:30:54.146983Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2021-08-31T13:30:54.146983Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2021-08-31T13:30:54.147989Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2021-08-31T13:30:54.148987Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2021-08-31T13:30:54.149952Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2021-08-31T13:30:54.150956Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2021-08-31T13:30:54.151957Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2021-08-31T13:30:54.151957Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2021-08-31T13:30:54.152991Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2021-08-31T13:30:54.153998Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2021-08-31T13:30:54.154967Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2021-08-31T13:30:54.154967Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2021-08-31T13:30:54.155999Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2021-08-31T13:30:54.157002Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2021-08-31T13:30:54.157002Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2021-08-31T13:30:54.158006Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2021-08-31T13:30:54.158976Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2021-08-31T13:30:54.158976Z 0 [Note] Shutting down plugin 'InnoDB'
+2021-08-31T13:30:54.160011Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2021-08-31T13:30:54.160981Z 0 [Note] InnoDB: Starting shutdown...
+2021-08-31T13:30:54.262288Z 0 [Note] InnoDB: Dumping buffer pool(s) to .\\ib_buffer_pool
+2021-08-31T13:30:54.277292Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 210831 16:30:54
+2021-08-31T13:30:55.178753Z 0 [Note] InnoDB: Shutdown completed; log sequence number 2390715
+2021-08-31T13:30:55.180736Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2021-08-31T13:30:55.181742Z 0 [Note] Shutting down plugin 'MEMORY'
+2021-08-31T13:30:55.182705Z 0 [Note] Shutting down plugin 'CSV'
+2021-08-31T13:30:55.182705Z 0 [Note] Shutting down plugin 'sha256_password'
+2021-08-31T13:30:55.183747Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2021-08-31T13:30:55.184748Z 0 [Note] Shutting down plugin 'binlog'
+2021-08-31T13:30:55.188724Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Shutdown complete
+
+2021-08-31T13:31:37.912854Z 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2021-08-31T13:31:37.916875Z 0 [Note] InnoDB: Uses event mutexes
+2021-08-31T13:31:37.917866Z 0 [Note] InnoDB: _mm_lfence() and _mm_sfence() are used for memory barrier
+2021-08-31T13:31:37.918877Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-08-31T13:31:37.919872Z 0 [Note] InnoDB: Adjusting innodb_buffer_pool_instances from 8 to 1 since innodb_buffer_pool_size is less than 1024 MiB
+2021-08-31T13:31:37.920873Z 0 [Note] InnoDB: Number of pools: 1
+2021-08-31T13:31:37.921877Z 0 [Note] InnoDB: Not using CPU crc32 instructions
+2021-08-31T13:31:37.936918Z 0 [Note] InnoDB: Initializing buffer pool, total size = 8M, instances = 1, chunk size = 8M
+2021-08-31T13:31:37.938921Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-08-31T13:31:37.951957Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-08-31T13:31:38.126422Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-08-31T13:31:38.129430Z 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-08-31T13:31:38.147509Z 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2021-08-31T13:31:38.149485Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2021-08-31T13:31:38.150488Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2021-08-31T13:31:38.152489Z 0 [Note] InnoDB: Waiting for purge to start
+2021-08-31T13:31:38.205631Z 0 [Note] InnoDB: 5.7.7 started; log sequence number 2390715
+2021-08-31T13:31:38.206636Z 0 [Note] InnoDB: Loading buffer pool(s) from .\\ib_buffer_pool
+2021-08-31T13:31:38.206636Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2021-08-31T13:31:38.219675Z 0 [Warning] Failed to setup SSL
+2021-08-31T13:31:38.220674Z 0 [Warning] SSL error: SSL context is not usable without certificate and private key
+2021-08-31T13:31:38.221677Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-08-31T13:31:38.222678Z 0 [Note] IPv6 is available.
+2021-08-31T13:31:38.223681Z 0 [Note]   - '::' resolves to '::';
+2021-08-31T13:31:38.224684Z 0 [Note] Server socket created on IP: '::'.
+2021-08-31T13:31:38.233709Z 0 [Note] InnoDB: Buffer pool(s) load completed at 210831 16:31:38
+2021-08-31T13:31:38.278828Z 0 [Note] Event Scheduler: Loaded 0 events
+2021-08-31T13:31:38.279830Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: ready for connections.
+Version: '5.7.7-rc-log'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2021-08-31T13:31:41.923544Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Normal shutdown
+
+2021-08-31T13:31:41.925553Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2021-08-31T13:31:41.925553Z 0 [Note] Shutting down slave threads
+2021-08-31T13:31:41.926553Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2021-08-31T13:31:41.927554Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2021-08-31T13:31:41.927554Z 0 [Note] Binlog end
+2021-08-31T13:31:41.930574Z 0 [Note] Shutting down plugin 'ngram'
+2021-08-31T13:31:41.931579Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2021-08-31T13:31:41.932577Z 0 [Note] Shutting down plugin 'partition'
+2021-08-31T13:31:41.932577Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2021-08-31T13:31:41.933574Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2021-08-31T13:31:41.933574Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2021-08-31T13:31:41.934576Z 0 [Note] Shutting down plugin 'MyISAM'
+2021-08-31T13:31:41.935579Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2021-08-31T13:31:41.935579Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2021-08-31T13:31:41.936582Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2021-08-31T13:31:41.937583Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2021-08-31T13:31:41.937583Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2021-08-31T13:31:41.938586Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2021-08-31T13:31:41.939589Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2021-08-31T13:31:41.939589Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2021-08-31T13:31:41.940592Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2021-08-31T13:31:41.941595Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2021-08-31T13:31:41.941595Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2021-08-31T13:31:41.942597Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2021-08-31T13:31:41.943599Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2021-08-31T13:31:41.943599Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2021-08-31T13:31:41.944604Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2021-08-31T13:31:41.945608Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2021-08-31T13:31:41.946626Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2021-08-31T13:31:41.947615Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2021-08-31T13:31:41.948613Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2021-08-31T13:31:41.948613Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2021-08-31T13:31:41.949616Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2021-08-31T13:31:41.950620Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2021-08-31T13:31:41.950620Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2021-08-31T13:31:41.951621Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2021-08-31T13:31:41.952624Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2021-08-31T13:31:41.952624Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2021-08-31T13:31:41.953627Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2021-08-31T13:31:41.953627Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2021-08-31T13:31:41.954629Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2021-08-31T13:31:41.955632Z 0 [Note] Shutting down plugin 'InnoDB'
+2021-08-31T13:31:41.955632Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2021-08-31T13:31:41.956668Z 0 [Note] InnoDB: Starting shutdown...
+2021-08-31T13:31:42.057944Z 0 [Note] InnoDB: Dumping buffer pool(s) to .\\ib_buffer_pool
+2021-08-31T13:31:42.063921Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 210831 16:31:42
+2021-08-31T13:31:43.175886Z 0 [Note] InnoDB: Shutdown completed; log sequence number 2391132
+2021-08-31T13:31:43.177893Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2021-08-31T13:31:43.178894Z 0 [Note] Shutting down plugin 'MEMORY'
+2021-08-31T13:31:43.179932Z 0 [Note] Shutting down plugin 'CSV'
+2021-08-31T13:31:43.179932Z 0 [Note] Shutting down plugin 'sha256_password'
+2021-08-31T13:31:43.180938Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2021-08-31T13:31:43.181940Z 0 [Note] Shutting down plugin 'binlog'
+2021-08-31T13:31:43.185914Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Shutdown complete
+
+2021-08-31T13:32:22.234208Z 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2021-08-31T13:32:22.239222Z 0 [Note] InnoDB: Uses event mutexes
+2021-08-31T13:32:22.240224Z 0 [Note] InnoDB: _mm_lfence() and _mm_sfence() are used for memory barrier
+2021-08-31T13:32:22.242230Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-08-31T13:32:22.243233Z 0 [Note] InnoDB: Adjusting innodb_buffer_pool_instances from 8 to 1 since innodb_buffer_pool_size is less than 1024 MiB
+2021-08-31T13:32:22.245237Z 0 [Note] InnoDB: Number of pools: 1
+2021-08-31T13:32:22.246241Z 0 [Note] InnoDB: Not using CPU crc32 instructions
+2021-08-31T13:32:22.264288Z 0 [Note] InnoDB: Initializing buffer pool, total size = 8M, instances = 1, chunk size = 8M
+2021-08-31T13:32:22.267297Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-08-31T13:32:22.283339Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-08-31T13:32:22.454137Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-08-31T13:32:22.456695Z 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-08-31T13:32:22.471698Z 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2021-08-31T13:32:22.473664Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2021-08-31T13:32:22.474666Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2021-08-31T13:32:22.475669Z 0 [Note] InnoDB: Waiting for purge to start
+2021-08-31T13:32:22.528171Z 0 [Note] InnoDB: 5.7.7 started; log sequence number 2391132
+2021-08-31T13:32:22.530176Z 0 [Note] InnoDB: Loading buffer pool(s) from .\\ib_buffer_pool
+2021-08-31T13:32:22.530176Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2021-08-31T13:32:22.543211Z 0 [Warning] Failed to setup SSL
+2021-08-31T13:32:22.544214Z 0 [Warning] SSL error: SSL context is not usable without certificate and private key
+2021-08-31T13:32:22.546221Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-08-31T13:32:22.547222Z 0 [Note] IPv6 is available.
+2021-08-31T13:32:22.547222Z 0 [Note]   - '::' resolves to '::';
+2021-08-31T13:32:22.548225Z 0 [Note] Server socket created on IP: '::'.
+2021-08-31T13:32:22.559254Z 0 [Note] InnoDB: Buffer pool(s) load completed at 210831 16:32:22
+2021-08-31T13:32:22.624428Z 0 [Note] Event Scheduler: Loaded 0 events
+2021-08-31T13:32:22.625431Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: ready for connections.
+Version: '5.7.7-rc-log'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2021-08-31T13:33:53.654084Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Normal shutdown
+
+2021-08-31T13:33:53.656095Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2021-08-31T13:33:53.656095Z 0 [Note] Shutting down slave threads
+2021-08-31T13:33:53.657099Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2021-08-31T13:33:53.658101Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2021-08-31T13:33:53.659104Z 0 [Note] Binlog end
+2021-08-31T13:33:53.660142Z 0 [Note] Shutting down plugin 'ngram'
+2021-08-31T13:33:53.661145Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2021-08-31T13:33:53.661145Z 0 [Note] Shutting down plugin 'partition'
+2021-08-31T13:33:53.662149Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2021-08-31T13:33:53.663118Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2021-08-31T13:33:53.664122Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2021-08-31T13:33:53.665131Z 0 [Note] Shutting down plugin 'MyISAM'
+2021-08-31T13:33:53.665131Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2021-08-31T13:33:53.666134Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2021-08-31T13:33:53.667133Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2021-08-31T13:33:53.668170Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2021-08-31T13:33:53.669171Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2021-08-31T13:33:53.669171Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2021-08-31T13:33:53.670177Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2021-08-31T13:33:53.671178Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2021-08-31T13:33:53.671178Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2021-08-31T13:33:53.672185Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2021-08-31T13:33:53.673185Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2021-08-31T13:33:53.674191Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2021-08-31T13:33:53.674191Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2021-08-31T13:33:53.675206Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2021-08-31T13:33:53.676198Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2021-08-31T13:33:53.677203Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2021-08-31T13:33:53.677203Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2021-08-31T13:33:53.678207Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2021-08-31T13:33:53.679174Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2021-08-31T13:33:53.680227Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2021-08-31T13:33:53.681232Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2021-08-31T13:33:53.682222Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2021-08-31T13:33:53.682222Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2021-08-31T13:33:53.683225Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2021-08-31T13:33:53.684229Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2021-08-31T13:33:53.684229Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2021-08-31T13:33:53.685227Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2021-08-31T13:33:53.686233Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2021-08-31T13:33:53.686233Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2021-08-31T13:33:53.687239Z 0 [Note] Shutting down plugin 'InnoDB'
+2021-08-31T13:33:53.688240Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2021-08-31T13:33:53.688240Z 0 [Note] InnoDB: Starting shutdown...
+2021-08-31T13:33:53.790676Z 0 [Note] InnoDB: Dumping buffer pool(s) to .\\ib_buffer_pool
+2021-08-31T13:33:53.798724Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 210831 16:33:53
+2021-08-31T13:33:54.920501Z 0 [Note] InnoDB: Shutdown completed; log sequence number 2391533
+2021-08-31T13:33:54.926871Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2021-08-31T13:33:54.929887Z 0 [Note] Shutting down plugin 'MEMORY'
+2021-08-31T13:33:54.932900Z 0 [Note] Shutting down plugin 'CSV'
+2021-08-31T13:33:54.934905Z 0 [Note] Shutting down plugin 'sha256_password'
+2021-08-31T13:33:54.936912Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2021-08-31T13:33:54.939922Z 0 [Note] Shutting down plugin 'binlog'
+2021-08-31T13:33:54.950165Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Shutdown complete
+
+2021-08-31T13:34:45.454186Z 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2021-08-31T13:34:45.457419Z 0 [Note] InnoDB: Uses event mutexes
+2021-08-31T13:34:45.458423Z 0 [Note] InnoDB: _mm_lfence() and _mm_sfence() are used for memory barrier
+2021-08-31T13:34:45.459427Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-08-31T13:34:45.460431Z 0 [Note] InnoDB: Adjusting innodb_buffer_pool_instances from 8 to 1 since innodb_buffer_pool_size is less than 1024 MiB
+2021-08-31T13:34:45.462437Z 0 [Note] InnoDB: Number of pools: 1
+2021-08-31T13:34:45.462437Z 0 [Note] InnoDB: Not using CPU crc32 instructions
+2021-08-31T13:34:45.476483Z 0 [Note] InnoDB: Initializing buffer pool, total size = 8M, instances = 1, chunk size = 8M
+2021-08-31T13:34:45.478489Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-08-31T13:34:45.493531Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-08-31T13:34:45.672790Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-08-31T13:34:45.675213Z 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-08-31T13:34:45.693231Z 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2021-08-31T13:34:45.695295Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2021-08-31T13:34:45.696248Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2021-08-31T13:34:45.697250Z 0 [Note] InnoDB: Waiting for purge to start
+2021-08-31T13:34:45.751277Z 0 [Note] InnoDB: 5.7.7 started; log sequence number 2391533
+2021-08-31T13:34:45.754331Z 0 [Note] InnoDB: Loading buffer pool(s) from .\\ib_buffer_pool
+2021-08-31T13:34:45.755283Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2021-08-31T13:34:45.796759Z 0 [Warning] Failed to setup SSL
+2021-08-31T13:34:45.798767Z 0 [Warning] SSL error: SSL context is not usable without certificate and private key
+2021-08-31T13:34:45.802772Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-08-31T13:34:45.806786Z 0 [Note] IPv6 is available.
+2021-08-31T13:34:45.808794Z 0 [Note]   - '::' resolves to '::';
+2021-08-31T13:34:45.809812Z 0 [Note] Server socket created on IP: '::'.
+2021-08-31T13:34:45.819828Z 0 [Note] InnoDB: Buffer pool(s) load completed at 210831 16:34:45
+2021-08-31T13:34:45.865026Z 0 [Note] Event Scheduler: Loaded 0 events
+2021-08-31T13:34:45.866029Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: ready for connections.
+Version: '5.7.7-rc-log'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2021-08-31T13:34:51.224924Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Normal shutdown
+
+2021-08-31T13:34:51.225930Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2021-08-31T13:34:51.226933Z 0 [Note] Shutting down slave threads
+2021-08-31T13:34:51.227973Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2021-08-31T13:34:51.228940Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2021-08-31T13:34:51.228940Z 0 [Note] Binlog end
+2021-08-31T13:34:51.230946Z 0 [Note] Shutting down plugin 'ngram'
+2021-08-31T13:34:51.231950Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2021-08-31T13:34:51.231950Z 0 [Note] Shutting down plugin 'partition'
+2021-08-31T13:34:51.232953Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2021-08-31T13:34:51.233957Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2021-08-31T13:34:51.233957Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2021-08-31T13:34:51.234960Z 0 [Note] Shutting down plugin 'MyISAM'
+2021-08-31T13:34:51.235964Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2021-08-31T13:34:51.235964Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2021-08-31T13:34:51.236967Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2021-08-31T13:34:51.237971Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2021-08-31T13:34:51.238974Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2021-08-31T13:34:51.238974Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2021-08-31T13:34:51.239978Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2021-08-31T13:34:51.240981Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2021-08-31T13:34:51.241985Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2021-08-31T13:34:51.241985Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2021-08-31T13:34:51.242988Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2021-08-31T13:34:51.243992Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2021-08-31T13:34:51.243992Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2021-08-31T13:34:51.244995Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2021-08-31T13:34:51.245999Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2021-08-31T13:34:51.247002Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2021-08-31T13:34:51.247002Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2021-08-31T13:34:51.248006Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2021-08-31T13:34:51.249010Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2021-08-31T13:34:51.250013Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2021-08-31T13:34:51.250013Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2021-08-31T13:34:51.251016Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2021-08-31T13:34:51.252020Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2021-08-31T13:34:51.252020Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2021-08-31T13:34:51.253023Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2021-08-31T13:34:51.254027Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2021-08-31T13:34:51.254027Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2021-08-31T13:34:51.255030Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2021-08-31T13:34:51.256034Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2021-08-31T13:34:51.256034Z 0 [Note] Shutting down plugin 'InnoDB'
+2021-08-31T13:34:51.257037Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2021-08-31T13:34:51.258075Z 0 [Note] InnoDB: Starting shutdown...
+2021-08-31T13:34:51.359908Z 0 [Note] InnoDB: Dumping buffer pool(s) to .\\ib_buffer_pool
+2021-08-31T13:34:51.377236Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 210831 16:34:51
+2021-08-31T13:34:52.081194Z 0 [Note] InnoDB: Shutdown completed; log sequence number 2391950
+2021-08-31T13:34:52.088230Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2021-08-31T13:34:52.091291Z 0 [Note] Shutting down plugin 'MEMORY'
+2021-08-31T13:34:52.093238Z 0 [Note] Shutting down plugin 'CSV'
+2021-08-31T13:34:52.095304Z 0 [Note] Shutting down plugin 'sha256_password'
+2021-08-31T13:34:52.097306Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2021-08-31T13:34:52.100263Z 0 [Note] Shutting down plugin 'binlog'
+2021-08-31T13:34:52.109881Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Shutdown complete
+
+2021-08-31T14:28:23.783534Z 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2021-08-31T14:28:23.787581Z 0 [Note] InnoDB: Uses event mutexes
+2021-08-31T14:28:23.787581Z 0 [Note] InnoDB: _mm_lfence() and _mm_sfence() are used for memory barrier
+2021-08-31T14:28:23.788584Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-08-31T14:28:23.789586Z 0 [Note] InnoDB: Adjusting innodb_buffer_pool_instances from 8 to 1 since innodb_buffer_pool_size is less than 1024 MiB
+2021-08-31T14:28:23.791591Z 0 [Note] InnoDB: Number of pools: 1
+2021-08-31T14:28:23.792594Z 0 [Note] InnoDB: Not using CPU crc32 instructions
+2021-08-31T14:28:23.805825Z 0 [Note] InnoDB: Initializing buffer pool, total size = 8M, instances = 1, chunk size = 8M
+2021-08-31T14:28:23.807830Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-08-31T14:28:23.824236Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-08-31T14:28:24.016781Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-08-31T14:28:24.018790Z 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-08-31T14:28:24.035536Z 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2021-08-31T14:28:24.041551Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2021-08-31T14:28:24.044559Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2021-08-31T14:28:24.047566Z 0 [Note] InnoDB: Waiting for purge to start
+2021-08-31T14:28:24.101812Z 0 [Note] InnoDB: 5.7.7 started; log sequence number 2391950
+2021-08-31T14:28:24.105814Z 0 [Note] InnoDB: Loading buffer pool(s) from .\\ib_buffer_pool
+2021-08-31T14:28:24.106829Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2021-08-31T14:28:24.157940Z 0 [Warning] Failed to setup SSL
+2021-08-31T14:28:24.160946Z 0 [Warning] SSL error: SSL context is not usable without certificate and private key
+2021-08-31T14:28:24.164953Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-08-31T14:28:24.167968Z 0 [Note] IPv6 is available.
+2021-08-31T14:28:24.168979Z 0 [Note]   - '::' resolves to '::';
+2021-08-31T14:28:24.170959Z 0 [Note] Server socket created on IP: '::'.
+2021-08-31T14:28:24.176932Z 0 [Note] InnoDB: Buffer pool(s) load completed at 210831 17:28:24
+2021-08-31T14:28:24.239143Z 0 [Note] Event Scheduler: Loaded 0 events
+2021-08-31T14:28:24.240101Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: ready for connections.
+Version: '5.7.7-rc-log'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2021-08-31T14:29:26.732308Z 2 [Note] Aborted connection 2 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-08-31T14:29:33.711605Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Normal shutdown
+
+2021-08-31T14:29:33.713573Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2021-08-31T14:29:33.714575Z 0 [Note] Shutting down slave threads
+2021-08-31T14:29:33.715577Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2021-08-31T14:29:33.715577Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2021-08-31T14:29:33.716630Z 0 [Note] Binlog end
+2021-08-31T14:29:33.718586Z 0 [Note] Shutting down plugin 'ngram'
+2021-08-31T14:29:33.719638Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2021-08-31T14:29:33.719638Z 0 [Note] Shutting down plugin 'partition'
+2021-08-31T14:29:33.720604Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2021-08-31T14:29:33.721645Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2021-08-31T14:29:33.721645Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2021-08-31T14:29:33.722596Z 0 [Note] Shutting down plugin 'MyISAM'
+2021-08-31T14:29:33.722596Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2021-08-31T14:29:33.723600Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2021-08-31T14:29:33.724603Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2021-08-31T14:29:33.725605Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2021-08-31T14:29:33.725605Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2021-08-31T14:29:33.726608Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2021-08-31T14:29:33.727659Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2021-08-31T14:29:33.727659Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2021-08-31T14:29:33.728665Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2021-08-31T14:29:33.729616Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2021-08-31T14:29:33.730619Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2021-08-31T14:29:33.730619Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2021-08-31T14:29:33.731622Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2021-08-31T14:29:33.732624Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2021-08-31T14:29:33.733628Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2021-08-31T14:29:33.733628Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2021-08-31T14:29:33.734630Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2021-08-31T14:29:33.735632Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2021-08-31T14:29:33.736635Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2021-08-31T14:29:33.736635Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2021-08-31T14:29:33.737637Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2021-08-31T14:29:33.738641Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2021-08-31T14:29:33.739706Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2021-08-31T14:29:33.739706Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2021-08-31T14:29:33.740700Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2021-08-31T14:29:33.741701Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2021-08-31T14:29:33.741701Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2021-08-31T14:29:33.742705Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2021-08-31T14:29:33.743716Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2021-08-31T14:29:33.743716Z 0 [Note] Shutting down plugin 'InnoDB'
+2021-08-31T14:29:33.744711Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2021-08-31T14:29:33.745658Z 0 [Note] InnoDB: Starting shutdown...
+2021-08-31T14:29:33.848185Z 0 [Note] InnoDB: Dumping buffer pool(s) to .\\ib_buffer_pool
+2021-08-31T14:29:33.876261Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 210831 17:29:33
+2021-08-31T14:29:34.621146Z 0 [Note] InnoDB: Shutdown completed; log sequence number 2392367
+2021-08-31T14:29:34.627153Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2021-08-31T14:29:34.630207Z 0 [Note] Shutting down plugin 'MEMORY'
+2021-08-31T14:29:34.633226Z 0 [Note] Shutting down plugin 'CSV'
+2021-08-31T14:29:34.635239Z 0 [Note] Shutting down plugin 'sha256_password'
+2021-08-31T14:29:34.638195Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2021-08-31T14:29:34.641236Z 0 [Note] Shutting down plugin 'binlog'
+2021-08-31T14:29:34.650266Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Shutdown complete
+
+2021-08-31T14:30:02.431509Z 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2021-08-31T14:30:02.433512Z 0 [Note] InnoDB: Uses event mutexes
+2021-08-31T14:30:02.435015Z 0 [Note] InnoDB: _mm_lfence() and _mm_sfence() are used for memory barrier
+2021-08-31T14:30:02.436520Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-08-31T14:30:02.438025Z 0 [Note] InnoDB: Adjusting innodb_buffer_pool_instances from 8 to 1 since innodb_buffer_pool_size is less than 1024 MiB
+2021-08-31T14:30:02.447047Z 0 [Note] InnoDB: Number of pools: 1
+2021-08-31T14:30:02.450557Z 0 [Note] InnoDB: Not using CPU crc32 instructions
+2021-08-31T14:30:02.467101Z 0 [Note] InnoDB: Initializing buffer pool, total size = 8M, instances = 1, chunk size = 8M
+2021-08-31T14:30:02.479641Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-08-31T14:30:02.503197Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-08-31T14:30:02.604972Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-08-31T14:30:02.612997Z 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-08-31T14:30:02.633936Z 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2021-08-31T14:30:02.635962Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2021-08-31T14:30:02.637967Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2021-08-31T14:30:02.638970Z 0 [Note] InnoDB: Waiting for purge to start
+2021-08-31T14:30:02.696125Z 0 [Note] InnoDB: 5.7.7 started; log sequence number 2392367
+2021-08-31T14:30:02.698128Z 0 [Note] InnoDB: Loading buffer pool(s) from .\\ib_buffer_pool
+2021-08-31T14:30:02.699131Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2021-08-31T14:30:02.746262Z 0 [Warning] Failed to setup SSL
+2021-08-31T14:30:02.747266Z 0 [Warning] SSL error: SSL context is not usable without certificate and private key
+2021-08-31T14:30:02.749270Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-08-31T14:30:02.751276Z 0 [Note] IPv6 is available.
+2021-08-31T14:30:02.753281Z 0 [Note]   - '::' resolves to '::';
+2021-08-31T14:30:02.754284Z 0 [Note] Server socket created on IP: '::'.
+2021-08-31T14:30:02.755287Z 0 [Note] InnoDB: Buffer pool(s) load completed at 210831 17:30:02
+2021-08-31T14:30:02.881138Z 0 [Note] Event Scheduler: Loaded 0 events
+2021-08-31T14:30:02.882140Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: ready for connections.
+Version: '5.7.7-rc-log'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2021-08-31T14:34:46.234812Z 7 [Note] Aborted connection 7 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-08-31T14:34:46.234812Z 3 [Note] Aborted connection 3 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-08-31T14:34:46.234812Z 5 [Note] Aborted connection 5 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-08-31T14:34:46.234812Z 8 [Note] Aborted connection 8 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-08-31T14:34:46.234812Z 6 [Note] Aborted connection 6 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-08-31T14:34:46.234812Z 4 [Note] Aborted connection 4 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-08-31T14:34:46.234812Z 9 [Note] Aborted connection 9 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-08-31T14:34:46.235815Z 10 [Note] Aborted connection 10 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-08-31T14:34:46.234812Z 2 [Note] Aborted connection 2 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-08-31T14:34:46.235815Z 11 [Note] Aborted connection 11 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-01T06:03:50.740207Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 54058991ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2021-09-01T06:27:17.548256Z 22 [Note] Aborted connection 22 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-01T06:27:17.548256Z 24 [Note] Aborted connection 24 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-01T06:27:17.548256Z 23 [Note] Aborted connection 23 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-01T06:27:17.548256Z 25 [Note] Aborted connection 25 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-01T06:27:17.548256Z 27 [Note] Aborted connection 27 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-01T06:27:17.548256Z 28 [Note] Aborted connection 28 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-01T06:27:17.548256Z 26 [Note] Aborted connection 26 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-01T06:27:17.548256Z 29 [Note] Aborted connection 29 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-01T06:27:17.548256Z 31 [Note] Aborted connection 31 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-01T06:27:17.548256Z 30 [Note] Aborted connection 30 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-02T06:03:36.768578Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 62954732ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2021-09-02T08:46:44.004817Z 36 [Note] Aborted connection 36 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-02T08:46:44.004817Z 32 [Note] Aborted connection 32 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-02T08:46:44.004817Z 38 [Note] Aborted connection 38 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-02T08:46:44.004817Z 33 [Note] Aborted connection 33 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-02T08:46:44.004817Z 34 [Note] Aborted connection 34 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-02T08:46:44.004817Z 35 [Note] Aborted connection 35 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-02T08:46:44.005817Z 37 [Note] Aborted connection 37 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-02T08:46:44.005817Z 39 [Note] Aborted connection 39 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-02T08:46:44.005817Z 40 [Note] Aborted connection 40 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-02T08:46:44.005817Z 41 [Note] Aborted connection 41 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-02T09:35:52.058479Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10697ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2021-09-03T06:01:01.747160Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 61936855ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2021-09-06T06:10:28.705979Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 235227524ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2021-09-06T06:57:22.042896Z 59 [Note] Aborted connection 59 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T06:57:22.042896Z 52 [Note] Aborted connection 52 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T06:57:22.042896Z 53 [Note] Aborted connection 53 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T06:57:22.042896Z 54 [Note] Aborted connection 54 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T06:57:22.042896Z 55 [Note] Aborted connection 55 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T06:57:22.042896Z 56 [Note] Aborted connection 56 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T06:57:22.042896Z 57 [Note] Aborted connection 57 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T06:57:22.042896Z 58 [Note] Aborted connection 58 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T06:57:22.042896Z 60 [Note] Aborted connection 60 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T06:57:22.043899Z 61 [Note] Aborted connection 61 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:04:35.797939Z 72 [Note] Aborted connection 72 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:04:35.797939Z 73 [Note] Aborted connection 73 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:04:35.798942Z 74 [Note] Aborted connection 74 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:04:35.798942Z 75 [Note] Aborted connection 75 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:04:35.798942Z 76 [Note] Aborted connection 76 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:04:35.798942Z 77 [Note] Aborted connection 77 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:04:35.798942Z 78 [Note] Aborted connection 78 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:04:35.799945Z 80 [Note] Aborted connection 80 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:04:35.799945Z 79 [Note] Aborted connection 79 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:04:35.799945Z 81 [Note] Aborted connection 81 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:11:12.570783Z 86 [Note] Aborted connection 86 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:11:12.570783Z 82 [Note] Aborted connection 82 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:11:12.570783Z 83 [Note] Aborted connection 83 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:11:12.571786Z 84 [Note] Aborted connection 84 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:11:12.571786Z 85 [Note] Aborted connection 85 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:11:12.571786Z 87 [Note] Aborted connection 87 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:11:12.571786Z 89 [Note] Aborted connection 89 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:11:12.571786Z 90 [Note] Aborted connection 90 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:11:12.571786Z 91 [Note] Aborted connection 91 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:11:12.573794Z 88 [Note] Aborted connection 88 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:15:14.867596Z 102 [Note] Aborted connection 102 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:15:14.869609Z 106 [Note] Aborted connection 106 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:15:14.869609Z 103 [Note] Aborted connection 103 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:15:14.869609Z 104 [Note] Aborted connection 104 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:15:14.871608Z 105 [Note] Aborted connection 105 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:15:14.871608Z 107 [Note] Aborted connection 107 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:15:14.871608Z 110 [Note] Aborted connection 110 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:15:14.872610Z 111 [Note] Aborted connection 111 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:15:14.872610Z 108 [Note] Aborted connection 108 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:15:14.872610Z 109 [Note] Aborted connection 109 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:21:44.439508Z 121 [Note] Aborted connection 121 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:21:44.439508Z 118 [Note] Aborted connection 118 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:21:44.439508Z 117 [Note] Aborted connection 117 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:21:44.439508Z 116 [Note] Aborted connection 116 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:21:44.439508Z 119 [Note] Aborted connection 119 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:21:44.440005Z 120 [Note] Aborted connection 120 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:21:44.440506Z 112 [Note] Aborted connection 112 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:21:44.441008Z 113 [Note] Aborted connection 113 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:21:44.441008Z 114 [Note] Aborted connection 114 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:21:44.441008Z 115 [Note] Aborted connection 115 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:23:09.952555Z 122 [Note] Aborted connection 122 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:23:09.953045Z 123 [Note] Aborted connection 123 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:23:09.953045Z 124 [Note] Aborted connection 124 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:23:09.953547Z 125 [Note] Aborted connection 125 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:23:09.953547Z 126 [Note] Aborted connection 126 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:23:09.953547Z 127 [Note] Aborted connection 127 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:23:09.953547Z 128 [Note] Aborted connection 128 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:23:09.953547Z 129 [Note] Aborted connection 129 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:23:09.953547Z 130 [Note] Aborted connection 130 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:23:09.954048Z 131 [Note] Aborted connection 131 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:31:32.081754Z 139 [Note] Aborted connection 139 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:31:32.082254Z 136 [Note] Aborted connection 136 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:31:32.082254Z 132 [Note] Aborted connection 132 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:31:32.082756Z 134 [Note] Aborted connection 134 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:31:32.082756Z 135 [Note] Aborted connection 135 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:31:32.082756Z 133 [Note] Aborted connection 133 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:31:32.082756Z 137 [Note] Aborted connection 137 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:31:32.082756Z 138 [Note] Aborted connection 138 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:31:32.083257Z 140 [Note] Aborted connection 140 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:31:32.083257Z 141 [Note] Aborted connection 141 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T07:36:17.703305Z 152 [Note] Aborted connection 152 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:09:06.953215Z 166 [Note] Aborted connection 166 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:09:06.958228Z 170 [Note] Aborted connection 170 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:09:06.954217Z 165 [Note] Aborted connection 165 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:09:06.954718Z 171 [Note] Aborted connection 171 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:09:06.954718Z 169 [Note] Aborted connection 169 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:09:06.953715Z 172 [Note] Aborted connection 172 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:09:06.958729Z 168 [Note] Aborted connection 168 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:09:06.958729Z 173 [Note] Aborted connection 173 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:09:06.963743Z 174 [Note] Aborted connection 174 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:09:06.963743Z 167 [Note] Aborted connection 167 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:11:24.078505Z 185 [Note] Aborted connection 185 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:11:24.078505Z 186 [Note] Aborted connection 186 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:11:24.079003Z 187 [Note] Aborted connection 187 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:11:24.079003Z 188 [Note] Aborted connection 188 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:11:24.079504Z 189 [Note] Aborted connection 189 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:11:24.080006Z 192 [Note] Aborted connection 192 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:11:24.080006Z 190 [Note] Aborted connection 190 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:11:24.080006Z 191 [Note] Aborted connection 191 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:11:24.080006Z 193 [Note] Aborted connection 193 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:11:24.080507Z 194 [Note] Aborted connection 194 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:16:15.404817Z 195 [Note] Aborted connection 195 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:16:15.405826Z 196 [Note] Aborted connection 196 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:16:15.405826Z 197 [Note] Aborted connection 197 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:16:15.406822Z 198 [Note] Aborted connection 198 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:16:15.406822Z 199 [Note] Aborted connection 199 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:16:15.406822Z 200 [Note] Aborted connection 200 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:16:15.406822Z 201 [Note] Aborted connection 201 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:16:15.406822Z 202 [Note] Aborted connection 202 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:16:15.406822Z 203 [Note] Aborted connection 203 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:16:15.406822Z 204 [Note] Aborted connection 204 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:19:41.945835Z 205 [Note] Aborted connection 205 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:19:41.946328Z 206 [Note] Aborted connection 206 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:19:41.946828Z 207 [Note] Aborted connection 207 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:19:41.946828Z 208 [Note] Aborted connection 208 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:19:41.946828Z 209 [Note] Aborted connection 209 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:19:41.946828Z 210 [Note] Aborted connection 210 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:19:41.946828Z 211 [Note] Aborted connection 211 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:19:41.947330Z 212 [Note] Aborted connection 212 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:19:41.947330Z 213 [Note] Aborted connection 213 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:19:41.947330Z 214 [Note] Aborted connection 214 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:35:44.895862Z 216 [Note] Aborted connection 216 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:35:44.895862Z 215 [Note] Aborted connection 215 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:35:44.895862Z 217 [Note] Aborted connection 217 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:35:44.896364Z 218 [Note] Aborted connection 218 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:35:44.896364Z 219 [Note] Aborted connection 219 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:35:44.896364Z 220 [Note] Aborted connection 220 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:35:44.896364Z 221 [Note] Aborted connection 221 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:35:44.896364Z 222 [Note] Aborted connection 222 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:35:44.896865Z 223 [Note] Aborted connection 223 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T08:35:44.896865Z 224 [Note] Aborted connection 224 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:34:49.531907Z 161 [Note] Aborted connection 161 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:34:50.313309Z 264 [Note] Aborted connection 264 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:34:50.313309Z 250 [Note] Aborted connection 250 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:34:50.314313Z 263 [Note] Aborted connection 263 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:34:50.314813Z 265 [Note] Aborted connection 265 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:34:50.314813Z 258 [Note] Aborted connection 258 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:34:50.315315Z 261 [Note] Aborted connection 261 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:34:50.316316Z 267 [Note] Aborted connection 267 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:34:50.316316Z 252 [Note] Aborted connection 252 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:34:50.316316Z 262 [Note] Aborted connection 262 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:34:50.316825Z 253 [Note] Aborted connection 253 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:35:05.702842Z 257 [Note] Aborted connection 257 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:35:05.703845Z 255 [Note] Aborted connection 255 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:35:05.703845Z 251 [Note] Aborted connection 251 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:35:05.703845Z 248 [Note] Aborted connection 248 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:35:05.704849Z 266 [Note] Aborted connection 266 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:35:05.704849Z 268 [Note] Aborted connection 268 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:35:05.704849Z 256 [Note] Aborted connection 256 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:35:05.705850Z 260 [Note] Aborted connection 260 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:35:05.705850Z 259 [Note] Aborted connection 259 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:35:05.705850Z 254 [Note] Aborted connection 254 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T09:35:22.548967Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Normal shutdown
+
+2021-09-06T09:35:22.594699Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2021-09-06T09:35:22.597716Z 0 [Note] Shutting down slave threads
+2021-09-06T09:35:22.602720Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2021-09-06T09:35:22.606730Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2021-09-06T09:35:22.681931Z 0 [Note] Binlog end
+2021-09-06T09:35:22.715019Z 0 [Note] Shutting down plugin 'ngram'
+2021-09-06T09:35:22.719029Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2021-09-06T09:35:22.751115Z 0 [Note] Shutting down plugin 'partition'
+2021-09-06T09:35:22.753121Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2021-09-06T09:35:22.756128Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2021-09-06T09:35:22.758133Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2021-09-06T09:35:22.760138Z 0 [Note] Shutting down plugin 'MyISAM'
+2021-09-06T09:35:22.763146Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2021-09-06T09:35:22.766154Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2021-09-06T09:35:22.768160Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2021-09-06T09:35:22.771167Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2021-09-06T09:35:22.774176Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2021-09-06T09:35:22.776182Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2021-09-06T09:35:22.779190Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2021-09-06T09:35:22.782198Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2021-09-06T09:35:22.784202Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2021-09-06T09:35:22.787213Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2021-09-06T09:35:22.789216Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2021-09-06T09:35:22.792224Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2021-09-06T09:35:22.795232Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2021-09-06T09:35:22.813280Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2021-09-06T09:35:22.815285Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2021-09-06T09:35:22.817290Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2021-09-06T09:35:22.818293Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2021-09-06T09:35:22.820298Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2021-09-06T09:35:22.822303Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2021-09-06T09:35:22.824309Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2021-09-06T09:35:22.826314Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2021-09-06T09:35:22.835339Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2021-09-06T09:35:22.837344Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2021-09-06T09:35:22.840354Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2021-09-06T09:35:22.842357Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2021-09-06T09:35:22.844363Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2021-09-06T09:35:22.847371Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2021-09-06T09:35:22.849377Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2021-09-06T09:35:22.858403Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2021-09-06T09:35:22.860406Z 0 [Note] Shutting down plugin 'InnoDB'
+2021-09-06T09:35:22.867424Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2021-09-06T09:35:22.869431Z 0 [Note] InnoDB: Starting shutdown...
+2021-09-06T09:35:22.981728Z 0 [Note] InnoDB: Dumping buffer pool(s) to .\\ib_buffer_pool
+2021-09-06T09:35:22.989750Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 210906 12:35:22
+2021-09-06T09:35:23.550240Z 0 [Note] InnoDB: Shutdown completed; log sequence number 2392784
+2021-09-06T09:35:23.564298Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2021-09-06T09:35:23.566283Z 0 [Note] Shutting down plugin 'MEMORY'
+2021-09-06T09:35:23.568290Z 0 [Note] Shutting down plugin 'CSV'
+2021-09-06T09:35:23.570294Z 0 [Note] Shutting down plugin 'sha256_password'
+2021-09-06T09:35:23.572300Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2021-09-06T09:35:23.574305Z 0 [Note] Shutting down plugin 'binlog'
+2021-09-06T09:35:23.604389Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: Shutdown complete
+
+2021-09-06T09:35:52.628740Z 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2021-09-06T09:35:52.630745Z 0 [Note] InnoDB: Uses event mutexes
+2021-09-06T09:35:52.631750Z 0 [Note] InnoDB: _mm_lfence() and _mm_sfence() are used for memory barrier
+2021-09-06T09:35:52.632751Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-09-06T09:35:52.634254Z 0 [Note] InnoDB: Adjusting innodb_buffer_pool_instances from 8 to 1 since innodb_buffer_pool_size is less than 1024 MiB
+2021-09-06T09:35:52.652302Z 0 [Note] InnoDB: Number of pools: 1
+2021-09-06T09:35:52.663833Z 0 [Note] InnoDB: Not using CPU crc32 instructions
+2021-09-06T09:35:52.672356Z 0 [Note] InnoDB: Initializing buffer pool, total size = 8M, instances = 1, chunk size = 8M
+2021-09-06T09:35:52.679876Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-09-06T09:35:52.702435Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-09-06T09:35:52.814235Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-09-06T09:35:52.816238Z 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-09-06T09:35:52.844818Z 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2021-09-06T09:35:52.849326Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2021-09-06T09:35:52.851833Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2021-09-06T09:35:52.853343Z 0 [Note] InnoDB: Waiting for purge to start
+2021-09-06T09:35:52.911494Z 0 [Note] InnoDB: 5.7.7 started; log sequence number 2392784
+2021-09-06T09:35:52.912995Z 0 [Note] InnoDB: Loading buffer pool(s) from .\\ib_buffer_pool
+2021-09-06T09:35:52.914499Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2021-09-06T09:35:52.950595Z 0 [Warning] Failed to setup SSL
+2021-09-06T09:35:52.951598Z 0 [Warning] SSL error: SSL context is not usable without certificate and private key
+2021-09-06T09:35:52.954606Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-09-06T09:35:52.956110Z 0 [Note] IPv6 is available.
+2021-09-06T09:35:52.957621Z 0 [Note]   - '::' resolves to '::';
+2021-09-06T09:35:52.960122Z 0 [Note] Server socket created on IP: '::'.
+2021-09-06T09:35:52.970649Z 0 [Note] InnoDB: Buffer pool(s) load completed at 210906 12:35:52
+2021-09-06T09:35:53.080942Z 0 [Note] Event Scheduler: Loaded 0 events
+2021-09-06T09:35:53.081945Z 0 [Note] C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe: ready for connections.
+Version: '5.7.7-rc-log'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2021-09-06T11:51:13.522105Z 36 [Note] Aborted connection 36 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:51:13.523107Z 34 [Note] Aborted connection 34 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:51:13.523107Z 44 [Note] Aborted connection 44 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:51:13.523107Z 32 [Note] Aborted connection 32 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:51:13.523107Z 40 [Note] Aborted connection 40 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:51:13.523107Z 33 [Note] Aborted connection 33 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:51:13.523107Z 38 [Note] Aborted connection 38 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:51:13.524110Z 39 [Note] Aborted connection 39 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:51:13.524110Z 41 [Note] Aborted connection 41 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:51:13.524110Z 42 [Note] Aborted connection 42 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:56:21.391809Z 72 [Note] Aborted connection 72 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:56:21.391809Z 73 [Note] Aborted connection 73 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:56:21.391809Z 74 [Note] Aborted connection 74 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:56:21.391809Z 75 [Note] Aborted connection 75 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:56:21.391809Z 76 [Note] Aborted connection 76 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:56:21.391809Z 77 [Note] Aborted connection 77 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:56:21.392812Z 78 [Note] Aborted connection 78 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:56:21.392812Z 79 [Note] Aborted connection 79 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:56:21.392812Z 80 [Note] Aborted connection 80 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T11:56:21.392812Z 81 [Note] Aborted connection 81 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:12:48.349439Z 82 [Note] Aborted connection 82 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:12:48.349439Z 83 [Note] Aborted connection 83 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:12:48.349439Z 84 [Note] Aborted connection 84 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:12:48.349439Z 85 [Note] Aborted connection 85 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:12:48.349439Z 86 [Note] Aborted connection 86 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:12:48.349439Z 87 [Note] Aborted connection 87 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:12:48.349439Z 88 [Note] Aborted connection 88 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:12:48.349439Z 89 [Note] Aborted connection 89 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:12:48.349439Z 90 [Note] Aborted connection 90 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:12:48.349439Z 91 [Note] Aborted connection 91 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:13:47.047000Z 95 [Note] Aborted connection 95 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:13:47.047000Z 98 [Note] Aborted connection 98 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:13:47.047000Z 92 [Note] Aborted connection 92 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:13:47.047000Z 93 [Note] Aborted connection 93 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:13:47.047000Z 94 [Note] Aborted connection 94 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:13:47.047000Z 96 [Note] Aborted connection 96 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:13:47.047000Z 97 [Note] Aborted connection 97 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:13:47.047000Z 99 [Note] Aborted connection 99 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:13:47.047000Z 100 [Note] Aborted connection 100 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:13:47.047000Z 101 [Note] Aborted connection 101 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:35:12.928342Z 132 [Note] Aborted connection 132 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:35:12.929346Z 133 [Note] Aborted connection 133 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:35:12.929346Z 134 [Note] Aborted connection 134 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:35:12.929346Z 135 [Note] Aborted connection 135 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:35:12.929346Z 136 [Note] Aborted connection 136 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:35:12.929346Z 138 [Note] Aborted connection 138 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:35:12.929346Z 137 [Note] Aborted connection 137 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:35:12.929346Z 139 [Note] Aborted connection 139 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:35:12.929346Z 140 [Note] Aborted connection 140 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:35:12.929346Z 141 [Note] Aborted connection 141 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:47:48.790368Z 170 [Note] Aborted connection 170 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:47:48.790368Z 162 [Note] Aborted connection 162 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:47:48.790368Z 164 [Note] Aborted connection 164 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:47:48.790368Z 165 [Note] Aborted connection 165 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:47:48.790368Z 163 [Note] Aborted connection 163 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:47:48.790368Z 166 [Note] Aborted connection 166 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:47:48.790368Z 167 [Note] Aborted connection 167 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:47:48.790368Z 168 [Note] Aborted connection 168 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:47:48.790368Z 169 [Note] Aborted connection 169 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:47:48.790368Z 171 [Note] Aborted connection 171 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:48:24.163941Z 175 [Note] Aborted connection 175 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:48:24.163941Z 176 [Note] Aborted connection 176 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:48:24.163941Z 173 [Note] Aborted connection 173 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:48:24.164942Z 179 [Note] Aborted connection 179 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:48:24.164942Z 172 [Note] Aborted connection 172 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:48:24.164942Z 174 [Note] Aborted connection 174 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:48:24.165944Z 177 [Note] Aborted connection 177 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:48:24.165944Z 178 [Note] Aborted connection 178 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:48:24.165944Z 180 [Note] Aborted connection 180 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:48:24.165944Z 181 [Note] Aborted connection 181 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:53:44.207674Z 182 [Note] Aborted connection 182 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:53:44.207674Z 183 [Note] Aborted connection 183 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:53:44.207674Z 184 [Note] Aborted connection 184 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:53:44.207674Z 185 [Note] Aborted connection 185 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:53:44.207674Z 186 [Note] Aborted connection 186 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:53:44.207674Z 187 [Note] Aborted connection 187 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:53:44.207674Z 188 [Note] Aborted connection 188 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:53:44.208678Z 189 [Note] Aborted connection 189 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:53:44.208678Z 190 [Note] Aborted connection 190 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-06T12:53:44.208678Z 191 [Note] Aborted connection 191 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T06:09:57.723500Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 62153615ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2021-09-07T06:23:18.595812Z 193 [Note] Aborted connection 193 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T06:23:18.596813Z 192 [Note] Aborted connection 192 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T06:23:18.603838Z 200 [Note] Aborted connection 200 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T06:23:18.599321Z 195 [Note] Aborted connection 195 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T06:23:18.600324Z 196 [Note] Aborted connection 196 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T06:23:18.601827Z 197 [Note] Aborted connection 197 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T06:23:18.602829Z 198 [Note] Aborted connection 198 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T06:23:18.602829Z 199 [Note] Aborted connection 199 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T06:23:18.598318Z 194 [Note] Aborted connection 194 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T06:23:18.605843Z 201 [Note] Aborted connection 201 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T07:14:45.516412Z 217 [Note] Aborted connection 217 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T07:14:45.516412Z 220 [Note] Aborted connection 220 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T07:14:45.516916Z 213 [Note] Aborted connection 213 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T07:14:45.516916Z 214 [Note] Aborted connection 214 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T07:14:45.516916Z 221 [Note] Aborted connection 221 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T07:14:45.516916Z 215 [Note] Aborted connection 215 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T07:14:45.517417Z 216 [Note] Aborted connection 216 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T07:14:45.517417Z 212 [Note] Aborted connection 212 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T07:14:45.517417Z 218 [Note] Aborted connection 218 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-07T07:14:45.517417Z 219 [Note] Aborted connection 219 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-08T06:16:48.695609Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 62410371ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2021-09-09T06:22:11.028298Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 62694456ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2021-09-09T07:04:44.016743Z 225 [Note] Aborted connection 225 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:04:44.016743Z 231 [Note] Aborted connection 231 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:04:44.016743Z 226 [Note] Aborted connection 226 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:04:44.016743Z 230 [Note] Aborted connection 230 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:04:44.017241Z 223 [Note] Aborted connection 223 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:04:44.017241Z 222 [Note] Aborted connection 222 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:04:44.017742Z 224 [Note] Aborted connection 224 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:04:44.017742Z 227 [Note] Aborted connection 227 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:04:44.017742Z 228 [Note] Aborted connection 228 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:04:44.017742Z 229 [Note] Aborted connection 229 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:05:33.317521Z 233 [Note] Aborted connection 233 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:05:33.317521Z 240 [Note] Aborted connection 240 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:05:33.317521Z 234 [Note] Aborted connection 234 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:05:33.317521Z 235 [Note] Aborted connection 235 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:05:33.317521Z 236 [Note] Aborted connection 236 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:05:33.317521Z 237 [Note] Aborted connection 237 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:05:33.318525Z 238 [Note] Aborted connection 238 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:05:33.318525Z 239 [Note] Aborted connection 239 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:05:33.318525Z 241 [Note] Aborted connection 241 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:05:33.318525Z 232 [Note] Aborted connection 232 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error writing communication packets)
+2021-09-09T07:25:58.872005Z 242 [Note] Aborted connection 242 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:25:58.872005Z 243 [Note] Aborted connection 243 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:25:58.872005Z 244 [Note] Aborted connection 244 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:25:58.872005Z 246 [Note] Aborted connection 246 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:25:58.872005Z 245 [Note] Aborted connection 245 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:25:58.872968Z 247 [Note] Aborted connection 247 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:25:58.872968Z 248 [Note] Aborted connection 248 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:25:58.872968Z 249 [Note] Aborted connection 249 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:25:58.872968Z 250 [Note] Aborted connection 250 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:25:58.872968Z 251 [Note] Aborted connection 251 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:36:09.538298Z 259 [Note] Aborted connection 259 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:36:09.538298Z 253 [Note] Aborted connection 253 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:36:09.539298Z 254 [Note] Aborted connection 254 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:36:09.539298Z 256 [Note] Aborted connection 256 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:36:09.539298Z 252 [Note] Aborted connection 252 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:36:09.539298Z 257 [Note] Aborted connection 257 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:36:09.539298Z 255 [Note] Aborted connection 255 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:36:09.539298Z 258 [Note] Aborted connection 258 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:36:09.539298Z 260 [Note] Aborted connection 260 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:36:09.539298Z 261 [Note] Aborted connection 261 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:57:07.564324Z 265 [Note] Aborted connection 265 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:57:07.564324Z 270 [Note] Aborted connection 270 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:57:07.564324Z 262 [Note] Aborted connection 262 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:57:07.565296Z 263 [Note] Aborted connection 263 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:57:07.565296Z 264 [Note] Aborted connection 264 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:57:07.565296Z 266 [Note] Aborted connection 266 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:57:07.565296Z 267 [Note] Aborted connection 267 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:57:07.565296Z 268 [Note] Aborted connection 268 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:57:07.565296Z 269 [Note] Aborted connection 269 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:57:07.565296Z 271 [Note] Aborted connection 271 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:04.448828Z 272 [Note] Aborted connection 272 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:04.448828Z 273 [Note] Aborted connection 273 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:04.448828Z 281 [Note] Aborted connection 281 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:04.448828Z 274 [Note] Aborted connection 274 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:04.448828Z 275 [Note] Aborted connection 275 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:04.448828Z 276 [Note] Aborted connection 276 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:04.448828Z 277 [Note] Aborted connection 277 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:04.449830Z 278 [Note] Aborted connection 278 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:04.449830Z 279 [Note] Aborted connection 279 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:04.449830Z 280 [Note] Aborted connection 280 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:46.939060Z 283 [Note] Aborted connection 283 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:46.945578Z 287 [Note] Aborted connection 287 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:46.945578Z 284 [Note] Aborted connection 284 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:46.946079Z 285 [Note] Aborted connection 285 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:46.939563Z 282 [Note] Aborted connection 282 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:46.946079Z 286 [Note] Aborted connection 286 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:46.947085Z 288 [Note] Aborted connection 288 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:46.947584Z 289 [Note] Aborted connection 289 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:46.948085Z 290 [Note] Aborted connection 290 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T07:58:46.948586Z 291 [Note] Aborted connection 291 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:04:58.450724Z 304 [Note] Aborted connection 304 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:04:58.450724Z 305 [Note] Aborted connection 305 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:04:58.451222Z 307 [Note] Aborted connection 307 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:04:58.451222Z 302 [Note] Aborted connection 302 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:04:58.451222Z 306 [Note] Aborted connection 306 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:04:58.451726Z 303 [Note] Aborted connection 303 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:04:58.451726Z 308 [Note] Aborted connection 308 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:04:58.451726Z 309 [Note] Aborted connection 309 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:04:58.451726Z 310 [Note] Aborted connection 310 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:04:58.451726Z 311 [Note] Aborted connection 311 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:13:02.134052Z 319 [Note] Aborted connection 319 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:13:02.134052Z 320 [Note] Aborted connection 320 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:13:02.134052Z 321 [Note] Aborted connection 321 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:13:02.135055Z 318 [Note] Aborted connection 318 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:13:02.135055Z 316 [Note] Aborted connection 316 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:13:02.135055Z 312 [Note] Aborted connection 312 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:13:02.135055Z 314 [Note] Aborted connection 314 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:13:02.135055Z 315 [Note] Aborted connection 315 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:13:02.135055Z 313 [Note] Aborted connection 313 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:13:02.135055Z 317 [Note] Aborted connection 317 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:17:06.304247Z 322 [Note] Aborted connection 322 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:17:06.304247Z 326 [Note] Aborted connection 326 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:17:06.304247Z 327 [Note] Aborted connection 327 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:17:06.304247Z 323 [Note] Aborted connection 323 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:17:06.304751Z 324 [Note] Aborted connection 324 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:17:06.304751Z 328 [Note] Aborted connection 328 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:17:06.304751Z 325 [Note] Aborted connection 325 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:17:06.305250Z 329 [Note] Aborted connection 329 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:17:06.305250Z 330 [Note] Aborted connection 330 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:17:06.305751Z 331 [Note] Aborted connection 331 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:27:56.390561Z 342 [Note] Aborted connection 342 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:27:56.390561Z 343 [Note] Aborted connection 343 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:27:56.390561Z 344 [Note] Aborted connection 344 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:27:56.390561Z 345 [Note] Aborted connection 345 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:27:56.390561Z 346 [Note] Aborted connection 346 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:27:56.390561Z 351 [Note] Aborted connection 351 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:27:56.390561Z 347 [Note] Aborted connection 347 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:27:56.390561Z 348 [Note] Aborted connection 348 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:27:56.391566Z 349 [Note] Aborted connection 349 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:27:56.391566Z 350 [Note] Aborted connection 350 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:36:49.305235Z 372 [Note] Aborted connection 372 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:40:15.166387Z 371 [Note] Aborted connection 371 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:40:15.166387Z 365 [Note] Aborted connection 365 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:40:15.166387Z 363 [Note] Aborted connection 363 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:40:15.166387Z 364 [Note] Aborted connection 364 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:40:15.167390Z 366 [Note] Aborted connection 366 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:40:15.167390Z 362 [Note] Aborted connection 362 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:40:15.167390Z 367 [Note] Aborted connection 367 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:40:15.167390Z 368 [Note] Aborted connection 368 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:40:15.167390Z 369 [Note] Aborted connection 369 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:40:15.168393Z 370 [Note] Aborted connection 370 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:43:16.537879Z 383 [Note] Aborted connection 383 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:43:16.537879Z 384 [Note] Aborted connection 384 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:43:16.537879Z 385 [Note] Aborted connection 385 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:43:16.538341Z 386 [Note] Aborted connection 386 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:43:16.538341Z 387 [Note] Aborted connection 387 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:43:16.538341Z 388 [Note] Aborted connection 388 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:43:16.538341Z 389 [Note] Aborted connection 389 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:43:16.538341Z 390 [Note] Aborted connection 390 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:43:16.538341Z 391 [Note] Aborted connection 391 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:43:16.538341Z 392 [Note] Aborted connection 392 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:55:49.624301Z 404 [Note] Aborted connection 404 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:55:49.624301Z 403 [Note] Aborted connection 403 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:55:49.624301Z 405 [Note] Aborted connection 405 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:55:49.624301Z 406 [Note] Aborted connection 406 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:55:49.624301Z 407 [Note] Aborted connection 407 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:55:49.624301Z 408 [Note] Aborted connection 408 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:55:49.624301Z 409 [Note] Aborted connection 409 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:55:49.624301Z 410 [Note] Aborted connection 410 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:55:49.624301Z 411 [Note] Aborted connection 411 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T08:55:49.625304Z 412 [Note] Aborted connection 412 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:50.828567Z 415 [Note] Aborted connection 415 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:50.828567Z 414 [Note] Aborted connection 414 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:50.828567Z 413 [Note] Aborted connection 413 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:50.828567Z 416 [Note] Aborted connection 416 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:50.828567Z 417 [Note] Aborted connection 417 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:50.828567Z 418 [Note] Aborted connection 418 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:50.828567Z 419 [Note] Aborted connection 419 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:50.828567Z 420 [Note] Aborted connection 420 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:50.828567Z 421 [Note] Aborted connection 421 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:50.829520Z 422 [Note] Aborted connection 422 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:58.701337Z 433 [Note] Aborted connection 433 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:58.701337Z 434 [Note] Aborted connection 434 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:58.701337Z 435 [Note] Aborted connection 435 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:58.701839Z 440 [Note] Aborted connection 440 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:58.701839Z 436 [Note] Aborted connection 436 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:58.702340Z 439 [Note] Aborted connection 439 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:58.702841Z 437 [Note] Aborted connection 437 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:58.703342Z 438 [Note] Aborted connection 438 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:58.703342Z 441 [Note] Aborted connection 441 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:08:58.703342Z 442 [Note] Aborted connection 442 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:19:08.744020Z 443 [Note] Aborted connection 443 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:19:08.744020Z 444 [Note] Aborted connection 444 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:19:08.744520Z 445 [Note] Aborted connection 445 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:19:08.744520Z 446 [Note] Aborted connection 446 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:19:08.744520Z 447 [Note] Aborted connection 447 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:19:08.744520Z 448 [Note] Aborted connection 448 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:19:08.744520Z 449 [Note] Aborted connection 449 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:19:08.744520Z 450 [Note] Aborted connection 450 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:19:08.744520Z 451 [Note] Aborted connection 451 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T09:19:08.745021Z 452 [Note] Aborted connection 452 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:11:26.064096Z 469 [Note] Aborted connection 469 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:11:26.064096Z 468 [Note] Aborted connection 468 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:11:26.064096Z 472 [Note] Aborted connection 472 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:11:26.064096Z 466 [Note] Aborted connection 466 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:11:26.065099Z 463 [Note] Aborted connection 463 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:11:26.065099Z 467 [Note] Aborted connection 467 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:11:26.065099Z 464 [Note] Aborted connection 464 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:11:26.065099Z 470 [Note] Aborted connection 470 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:11:26.065099Z 471 [Note] Aborted connection 471 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:11:26.073119Z 465 [Note] Aborted connection 465 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:15:44.313801Z 488 [Note] Aborted connection 488 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:15:44.313801Z 492 [Note] Aborted connection 492 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:15:44.313801Z 487 [Note] Aborted connection 487 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:15:44.313801Z 491 [Note] Aborted connection 491 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:15:44.313801Z 483 [Note] Aborted connection 483 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:15:44.313801Z 486 [Note] Aborted connection 486 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:15:44.313801Z 484 [Note] Aborted connection 484 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:15:44.313801Z 485 [Note] Aborted connection 485 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:15:44.313801Z 489 [Note] Aborted connection 489 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:15:44.313801Z 490 [Note] Aborted connection 490 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:27:50.735712Z 494 [Note] Aborted connection 494 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:27:50.736213Z 501 [Note] Aborted connection 501 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:27:50.736213Z 493 [Note] Aborted connection 493 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:27:50.736714Z 495 [Note] Aborted connection 495 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:27:50.736714Z 498 [Note] Aborted connection 498 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:27:50.736714Z 496 [Note] Aborted connection 496 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:27:50.737215Z 502 [Note] Aborted connection 502 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:27:50.737215Z 500 [Note] Aborted connection 500 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:27:50.737716Z 499 [Note] Aborted connection 499 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:27:50.737716Z 497 [Note] Aborted connection 497 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:29:56.334856Z 516 [Note] Aborted connection 516 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:29:56.334856Z 513 [Note] Aborted connection 513 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:29:56.334856Z 514 [Note] Aborted connection 514 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:29:56.334856Z 515 [Note] Aborted connection 515 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:29:56.334856Z 518 [Note] Aborted connection 518 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:29:56.334856Z 519 [Note] Aborted connection 519 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:29:56.334856Z 517 [Note] Aborted connection 517 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:29:56.334856Z 520 [Note] Aborted connection 520 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:29:56.334856Z 521 [Note] Aborted connection 521 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:29:56.334856Z 522 [Note] Aborted connection 522 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:38:32.388971Z 540 [Note] Aborted connection 540 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:38:32.389472Z 536 [Note] Aborted connection 536 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:38:32.389472Z 538 [Note] Aborted connection 538 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:38:32.389472Z 542 [Note] Aborted connection 542 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:38:32.389472Z 539 [Note] Aborted connection 539 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:38:32.389472Z 534 [Note] Aborted connection 534 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:38:32.389974Z 535 [Note] Aborted connection 535 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:38:32.389974Z 533 [Note] Aborted connection 533 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:38:32.389974Z 537 [Note] Aborted connection 537 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:38:32.389974Z 541 [Note] Aborted connection 541 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:44:50.403235Z 553 [Note] Aborted connection 553 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:44:50.403235Z 562 [Note] Aborted connection 562 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:44:50.403235Z 554 [Note] Aborted connection 554 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:44:50.403235Z 555 [Note] Aborted connection 555 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:44:50.403235Z 556 [Note] Aborted connection 556 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:44:50.403235Z 557 [Note] Aborted connection 557 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:44:50.403235Z 558 [Note] Aborted connection 558 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:44:50.403235Z 559 [Note] Aborted connection 559 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:44:50.403235Z 560 [Note] Aborted connection 560 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:44:50.403235Z 561 [Note] Aborted connection 561 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:53:42.871515Z 563 [Note] Aborted connection 563 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:53:42.871515Z 564 [Note] Aborted connection 564 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:53:42.871515Z 565 [Note] Aborted connection 565 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:53:42.871515Z 566 [Note] Aborted connection 566 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:53:42.871515Z 567 [Note] Aborted connection 567 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:53:42.871515Z 568 [Note] Aborted connection 568 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:53:42.871515Z 569 [Note] Aborted connection 569 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:53:42.871515Z 570 [Note] Aborted connection 570 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:53:42.871515Z 571 [Note] Aborted connection 571 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T10:53:42.871515Z 572 [Note] Aborted connection 572 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:10:33.954680Z 593 [Note] Aborted connection 593 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:10:33.959693Z 600 [Note] Aborted connection 600 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:10:33.955682Z 594 [Note] Aborted connection 594 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:10:33.955682Z 596 [Note] Aborted connection 596 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:10:33.956685Z 598 [Note] Aborted connection 598 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:10:33.956685Z 599 [Note] Aborted connection 599 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:10:33.959693Z 597 [Note] Aborted connection 597 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:10:33.959693Z 601 [Note] Aborted connection 601 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:10:33.959693Z 602 [Note] Aborted connection 602 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:10:33.955682Z 595 [Note] Aborted connection 595 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:20:04.748976Z 635 [Note] Aborted connection 635 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:20:04.748976Z 636 [Note] Aborted connection 636 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:20:04.748976Z 640 [Note] Aborted connection 640 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:20:04.748976Z 634 [Note] Aborted connection 634 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:20:04.748976Z 642 [Note] Aborted connection 642 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:20:04.749978Z 638 [Note] Aborted connection 638 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:20:04.749978Z 633 [Note] Aborted connection 633 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:20:04.749978Z 637 [Note] Aborted connection 637 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:20:04.749978Z 639 [Note] Aborted connection 639 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:20:04.749978Z 641 [Note] Aborted connection 641 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:27:55.132231Z 627 [Note] Aborted connection 627 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:27:55.132231Z 626 [Note] Aborted connection 626 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:27:55.132231Z 628 [Note] Aborted connection 628 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:27:55.132231Z 623 [Note] Aborted connection 623 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:27:55.132231Z 625 [Note] Aborted connection 625 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:27:55.132231Z 624 [Note] Aborted connection 624 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:27:55.132231Z 629 [Note] Aborted connection 629 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:27:55.132231Z 630 [Note] Aborted connection 630 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:27:55.132231Z 631 [Note] Aborted connection 631 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:27:55.133233Z 632 [Note] Aborted connection 632 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:34:12.465022Z 656 [Note] Aborted connection 656 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:34:12.465022Z 662 [Note] Aborted connection 662 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:34:12.465022Z 654 [Note] Aborted connection 654 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:34:12.465524Z 658 [Note] Aborted connection 658 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:34:12.465524Z 661 [Note] Aborted connection 661 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:34:12.466030Z 660 [Note] Aborted connection 660 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:34:12.466030Z 653 [Note] Aborted connection 653 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:34:12.466030Z 655 [Note] Aborted connection 655 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:34:12.466030Z 659 [Note] Aborted connection 659 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T11:34:12.466030Z 657 [Note] Aborted connection 657 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:06:26.071428Z 676 [Note] Aborted connection 676 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:06:26.126576Z 673 [Note] Aborted connection 673 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:06:26.181220Z 674 [Note] Aborted connection 674 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:06:26.181220Z 679 [Note] Aborted connection 679 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:06:26.181722Z 675 [Note] Aborted connection 675 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:06:26.181722Z 677 [Note] Aborted connection 677 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:06:26.182223Z 678 [Note] Aborted connection 678 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:06:26.182223Z 680 [Note] Aborted connection 680 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:06:26.182724Z 681 [Note] Aborted connection 681 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:06:26.182724Z 682 [Note] Aborted connection 682 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:09:30.902374Z 683 [Note] Aborted connection 683 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:09:30.902374Z 684 [Note] Aborted connection 684 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:09:30.902374Z 685 [Note] Aborted connection 685 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:09:30.902374Z 686 [Note] Aborted connection 686 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:09:30.902374Z 687 [Note] Aborted connection 687 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:09:30.902374Z 688 [Note] Aborted connection 688 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:09:30.902374Z 689 [Note] Aborted connection 689 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:09:30.902832Z 691 [Note] Aborted connection 691 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:09:30.902832Z 692 [Note] Aborted connection 692 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:09:30.902832Z 690 [Note] Aborted connection 690 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:26:50.891056Z 708 [Note] Aborted connection 708 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:26:50.918626Z 704 [Note] Aborted connection 704 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:26:50.925644Z 707 [Note] Aborted connection 707 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:26:50.931662Z 703 [Note] Aborted connection 703 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:26:50.938185Z 705 [Note] Aborted connection 705 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:26:50.938682Z 709 [Note] Aborted connection 709 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:26:50.938682Z 710 [Note] Aborted connection 710 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:26:50.938682Z 711 [Note] Aborted connection 711 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:26:50.938682Z 706 [Note] Aborted connection 706 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-09T12:26:50.939182Z 712 [Note] Aborted connection 712 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T06:15:06.712670Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 63458438ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2021-09-10T07:15:29.279619Z 722 [Note] Aborted connection 722 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:15:29.279619Z 716 [Note] Aborted connection 716 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:15:29.279619Z 721 [Note] Aborted connection 721 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:15:29.279619Z 713 [Note] Aborted connection 713 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:15:29.279619Z 717 [Note] Aborted connection 717 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:15:29.279619Z 714 [Note] Aborted connection 714 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:15:29.279619Z 718 [Note] Aborted connection 718 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:15:29.279619Z 719 [Note] Aborted connection 719 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:15:29.279619Z 720 [Note] Aborted connection 720 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:15:29.279619Z 715 [Note] Aborted connection 715 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:33:46.022870Z 733 [Note] Aborted connection 733 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:33:46.028886Z 736 [Note] Aborted connection 736 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:33:46.023873Z 735 [Note] Aborted connection 735 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:33:46.029889Z 739 [Note] Aborted connection 739 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:33:46.029889Z 734 [Note] Aborted connection 734 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:33:46.031893Z 737 [Note] Aborted connection 737 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:33:46.032396Z 738 [Note] Aborted connection 738 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:33:46.032396Z 740 [Note] Aborted connection 740 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:33:46.032396Z 741 [Note] Aborted connection 741 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:33:46.032897Z 742 [Note] Aborted connection 742 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:35:57.261531Z 755 [Note] Aborted connection 755 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:35:57.261531Z 753 [Note] Aborted connection 753 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:35:57.261531Z 754 [Note] Aborted connection 754 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:35:57.261531Z 756 [Note] Aborted connection 756 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:35:57.261531Z 757 [Note] Aborted connection 757 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:35:57.261531Z 758 [Note] Aborted connection 758 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:35:57.261977Z 759 [Note] Aborted connection 759 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:35:57.261977Z 760 [Note] Aborted connection 760 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:35:57.261977Z 761 [Note] Aborted connection 761 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:35:57.261977Z 762 [Note] Aborted connection 762 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:43:42.516953Z 771 [Note] Aborted connection 771 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:43:42.516953Z 769 [Note] Aborted connection 769 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:43:42.517456Z 770 [Note] Aborted connection 770 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:43:42.517957Z 764 [Note] Aborted connection 764 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:43:42.517957Z 765 [Note] Aborted connection 765 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:43:42.518458Z 763 [Note] Aborted connection 763 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:43:42.518458Z 766 [Note] Aborted connection 766 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:43:42.518959Z 768 [Note] Aborted connection 768 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:43:42.518959Z 767 [Note] Aborted connection 767 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:43:42.518959Z 772 [Note] Aborted connection 772 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:51:44.028144Z 773 [Note] Aborted connection 773 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:51:44.028144Z 774 [Note] Aborted connection 774 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:51:44.028144Z 775 [Note] Aborted connection 775 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:51:44.028144Z 776 [Note] Aborted connection 776 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:51:44.028646Z 777 [Note] Aborted connection 777 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:51:44.028646Z 778 [Note] Aborted connection 778 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:51:44.028646Z 779 [Note] Aborted connection 779 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:51:44.028646Z 780 [Note] Aborted connection 780 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:51:44.029147Z 781 [Note] Aborted connection 781 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T07:51:44.029147Z 782 [Note] Aborted connection 782 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T11:30:13.507285Z 855 [Note] Aborted connection 855 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T11:30:13.507285Z 861 [Note] Aborted connection 861 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T11:30:13.507285Z 854 [Note] Aborted connection 854 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T11:30:13.508287Z 859 [Note] Aborted connection 859 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T11:30:13.508287Z 862 [Note] Aborted connection 862 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T11:30:13.508287Z 856 [Note] Aborted connection 856 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T11:30:13.508287Z 860 [Note] Aborted connection 860 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T11:30:13.508287Z 853 [Note] Aborted connection 853 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T11:30:13.509291Z 857 [Note] Aborted connection 857 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-10T11:30:13.509291Z 858 [Note] Aborted connection 858 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T06:05:00.698394Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 236125226ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2021-09-13T06:26:27.591465Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 782073ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2021-09-13T07:06:44.253474Z 865 [Note] Aborted connection 865 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T07:06:44.253474Z 863 [Note] Aborted connection 863 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T07:06:44.253977Z 866 [Note] Aborted connection 866 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T07:06:44.253977Z 864 [Note] Aborted connection 864 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T07:06:44.253977Z 868 [Note] Aborted connection 868 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T07:06:44.253977Z 867 [Note] Aborted connection 867 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T07:06:44.253977Z 869 [Note] Aborted connection 869 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T07:06:44.254477Z 871 [Note] Aborted connection 871 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T07:06:44.254477Z 870 [Note] Aborted connection 870 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T07:06:44.254477Z 872 [Note] Aborted connection 872 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T07:48:15.742326Z 883 [Note] Aborted connection 883 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T09:18:26.900988Z 901 [Note] Aborted connection 901 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T09:18:26.900988Z 906 [Note] Aborted connection 906 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T09:18:26.901986Z 905 [Note] Aborted connection 905 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T09:18:26.901986Z 904 [Note] Aborted connection 904 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T09:18:26.901986Z 903 [Note] Aborted connection 903 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T09:18:26.901986Z 900 [Note] Aborted connection 900 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T09:18:26.902989Z 898 [Note] Aborted connection 898 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T09:18:26.902989Z 897 [Note] Aborted connection 897 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T09:18:26.902989Z 902 [Note] Aborted connection 902 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T09:18:26.902989Z 899 [Note] Aborted connection 899 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T09:20:27.294340Z 894 [Note] Aborted connection 894 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T10:36:53.515684Z 931 [Note] Aborted connection 931 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T10:36:53.515684Z 934 [Note] Aborted connection 934 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T10:36:53.515684Z 927 [Note] Aborted connection 927 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T10:36:53.515684Z 929 [Note] Aborted connection 929 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T10:36:53.515684Z 933 [Note] Aborted connection 933 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T10:36:53.515684Z 932 [Note] Aborted connection 932 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T10:36:53.516646Z 935 [Note] Aborted connection 935 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T10:36:53.516646Z 936 [Note] Aborted connection 936 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T10:36:53.516646Z 930 [Note] Aborted connection 930 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T10:36:53.517647Z 928 [Note] Aborted connection 928 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:26:03.356983Z 946 [Note] Aborted connection 946 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:26:03.356983Z 943 [Note] Aborted connection 943 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:26:03.356983Z 937 [Note] Aborted connection 937 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:26:03.357984Z 938 [Note] Aborted connection 938 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:26:03.357984Z 940 [Note] Aborted connection 940 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:26:03.357984Z 939 [Note] Aborted connection 939 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:26:03.357984Z 942 [Note] Aborted connection 942 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:26:03.357984Z 944 [Note] Aborted connection 944 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:26:03.357984Z 945 [Note] Aborted connection 945 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:26:03.357984Z 941 [Note] Aborted connection 941 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:56:44.910981Z 949 [Note] Aborted connection 949 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:56:44.911482Z 948 [Note] Aborted connection 948 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:56:44.911983Z 958 [Note] Aborted connection 958 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:56:44.912485Z 950 [Note] Aborted connection 950 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:56:44.912485Z 951 [Note] Aborted connection 951 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:56:44.912485Z 954 [Note] Aborted connection 954 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:56:44.912987Z 955 [Note] Aborted connection 955 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:56:44.912987Z 956 [Note] Aborted connection 956 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:56:44.912987Z 957 [Note] Aborted connection 957 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T11:56:44.913488Z 959 [Note] Aborted connection 959 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:00:28.558531Z 960 [Note] Aborted connection 960 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:00:28.558531Z 961 [Note] Aborted connection 961 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:00:28.558531Z 962 [Note] Aborted connection 962 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:00:28.558531Z 963 [Note] Aborted connection 963 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:00:28.558531Z 965 [Note] Aborted connection 965 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:00:28.558531Z 964 [Note] Aborted connection 964 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:00:28.558531Z 966 [Note] Aborted connection 966 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:00:28.558531Z 967 [Note] Aborted connection 967 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:00:28.558531Z 968 [Note] Aborted connection 968 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:00:28.558531Z 969 [Note] Aborted connection 969 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:05:37.415895Z 971 [Note] Aborted connection 971 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:05:37.415895Z 972 [Note] Aborted connection 972 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:05:37.415895Z 973 [Note] Aborted connection 973 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:05:37.415895Z 974 [Note] Aborted connection 974 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:05:37.415895Z 975 [Note] Aborted connection 975 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:05:37.416897Z 978 [Note] Aborted connection 978 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:05:37.416897Z 976 [Note] Aborted connection 976 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:05:37.417899Z 970 [Note] Aborted connection 970 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:05:37.417899Z 977 [Note] Aborted connection 977 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:05:37.417899Z 979 [Note] Aborted connection 979 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:10:15.860326Z 980 [Note] Aborted connection 980 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:10:15.860810Z 981 [Note] Aborted connection 981 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:10:15.860810Z 982 [Note] Aborted connection 982 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:10:15.860810Z 983 [Note] Aborted connection 983 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:10:15.860810Z 984 [Note] Aborted connection 984 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:10:15.861312Z 986 [Note] Aborted connection 986 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:10:15.861312Z 985 [Note] Aborted connection 985 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:10:15.861312Z 987 [Note] Aborted connection 987 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:10:15.861312Z 989 [Note] Aborted connection 989 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:10:15.861312Z 988 [Note] Aborted connection 988 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:29:57.171169Z 990 [Note] Aborted connection 990 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:29:57.171169Z 998 [Note] Aborted connection 998 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:29:57.200250Z 991 [Note] Aborted connection 991 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:29:57.200250Z 992 [Note] Aborted connection 992 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:29:57.200748Z 993 [Note] Aborted connection 993 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:29:57.201252Z 995 [Note] Aborted connection 995 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:29:57.201752Z 994 [Note] Aborted connection 994 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:29:57.202253Z 996 [Note] Aborted connection 996 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:29:57.202253Z 997 [Note] Aborted connection 997 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T12:29:57.202755Z 999 [Note] Aborted connection 999 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T13:04:38.934556Z 1021 [Note] Aborted connection 1021 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T13:04:38.934556Z 1027 [Note] Aborted connection 1027 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T13:04:38.939065Z 1001 [Note] Aborted connection 1001 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T13:04:38.939065Z 1022 [Note] Aborted connection 1022 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T13:04:38.939567Z 1028 [Note] Aborted connection 1028 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T13:04:38.942575Z 1024 [Note] Aborted connection 1024 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T13:04:38.945583Z 1026 [Note] Aborted connection 1026 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T13:04:38.946586Z 1029 [Note] Aborted connection 1029 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T13:04:38.947091Z 1023 [Note] Aborted connection 1023 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T13:04:38.947091Z 1025 [Note] Aborted connection 1025 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T13:50:21.547605Z 1010 [Note] Aborted connection 1010 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T14:55:55.062016Z 1032 [Note] Aborted connection 1032 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T14:55:55.066021Z 1033 [Note] Aborted connection 1033 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T14:55:55.068026Z 1034 [Note] Aborted connection 1034 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T14:55:55.074046Z 1039 [Note] Aborted connection 1039 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T14:55:55.071039Z 1036 [Note] Aborted connection 1036 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T14:55:55.072042Z 1037 [Note] Aborted connection 1037 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T14:55:55.073038Z 1038 [Note] Aborted connection 1038 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T14:55:55.070036Z 1035 [Note] Aborted connection 1035 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T14:55:55.076051Z 1040 [Note] Aborted connection 1040 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T14:55:55.076051Z 1041 [Note] Aborted connection 1041 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:07:08.796032Z 1052 [Note] Aborted connection 1052 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:07:08.796032Z 1054 [Note] Aborted connection 1054 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:07:08.796032Z 1053 [Note] Aborted connection 1053 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:07:08.796032Z 1055 [Note] Aborted connection 1055 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:07:08.796032Z 1056 [Note] Aborted connection 1056 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:07:08.796032Z 1057 [Note] Aborted connection 1057 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:07:08.796032Z 1058 [Note] Aborted connection 1058 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:07:08.797036Z 1059 [Note] Aborted connection 1059 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:07:08.797036Z 1060 [Note] Aborted connection 1060 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:07:08.797036Z 1061 [Note] Aborted connection 1061 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:11:01.168852Z 1072 [Note] Aborted connection 1072 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:11:17.480679Z 1073 [Note] Aborted connection 1073 to db: 'test' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:11:17.480679Z 1074 [Note] Aborted connection 1074 to db: 'test' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:11:17.480679Z 1075 [Note] Aborted connection 1075 to db: 'test' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:11:17.480679Z 1076 [Note] Aborted connection 1076 to db: 'test' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:11:17.481678Z 1077 [Note] Aborted connection 1077 to db: 'test' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:11:17.481678Z 1078 [Note] Aborted connection 1078 to db: 'test' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:11:17.481678Z 1079 [Note] Aborted connection 1079 to db: 'test' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:11:17.481678Z 1080 [Note] Aborted connection 1080 to db: 'test' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:11:17.481678Z 1081 [Note] Aborted connection 1081 to db: 'test' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:11:17.481678Z 1082 [Note] Aborted connection 1082 to db: 'test' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:18:53.709290Z 1085 [Note] Aborted connection 1085 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:18:53.709290Z 1086 [Note] Aborted connection 1086 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:18:53.709290Z 1084 [Note] Aborted connection 1084 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:18:53.709290Z 1087 [Note] Aborted connection 1087 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:18:53.710293Z 1083 [Note] Aborted connection 1083 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:18:53.710293Z 1088 [Note] Aborted connection 1088 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:18:53.710293Z 1089 [Note] Aborted connection 1089 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:18:53.710293Z 1090 [Note] Aborted connection 1090 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:18:53.710293Z 1091 [Note] Aborted connection 1091 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-09-13T15:18:53.710293Z 1092 [Note] Aborted connection 1092 to db: 'mentenance' user: 'root' host: 'localhost' (Got an error reading communication packets)

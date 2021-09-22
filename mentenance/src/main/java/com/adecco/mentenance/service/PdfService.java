@@ -39,28 +39,27 @@ public class PdfService {
         document.add( Chunk.NEWLINE );
         document.add( Chunk.NEWLINE );
 
-        for(Task task: raport.getTasks()){
+        for(Task task: raport.getTodoTasks()){
             List<Path> paths = storageService.getImagePaths(task.getTid());
-            if(paths.size() != 0){
-//
-                document.add( new Paragraph( "Subansamblu: "+task.getComponent().getSubansamblu().getSname(),font) );
-                document.add( new Paragraph( "Componenta: "+task.getComponent().getName(),font) );
-                document.add( new Paragraph( "Lucrari conf. plan anual: "+task.getTaskType().getTtname(),font) );
-                document.add( new Paragraph( "Actiune 1: "+task.getAction1(),font) );
-                document.add( new Paragraph( "Actiune 2: "+task.getAction2(),font) );
-                document.add( new Paragraph( "Actiune 3: "+task.getAction3(),font) );
-                document.add( new Paragraph( "Personal Intern: "+task.getPintern(),font) );
-                document.add( new Paragraph( "Observatii: "+task.getObsWorker(),font) );
-                document.add( new Paragraph( "Lucrari conf. situatie reala: "+task.getRealSituation(),font) );
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd LLLL yyyy");
-                String date = task.getDate()==null? "NULL" : task.getDate().format(formatter);
-                document.add( new Paragraph( "Data: "+date,font) );
-                document.add(new Paragraph("Images:",font));
-                for(Path path: paths){
-                    addImage(document, path);
-                }
-                document.newPage();
+
+            document.add( new Paragraph( "Subansamblu: "+task.getComponent().getSubansamblu().getSname(),font) );
+            document.add( new Paragraph( "Componenta: "+task.getComponent().getName(),font) );
+            document.add( new Paragraph( "Lucrari conf. plan anual: "+task.getTaskType().getTtname(),font) );
+            document.add( new Paragraph( "Actiune 1: "+task.getAction1(),font) );
+            document.add( new Paragraph( "Actiune 2: "+task.getAction2(),font) );
+            document.add( new Paragraph( "Actiune 3: "+task.getAction3(),font) );
+            document.add( new Paragraph( "Personal Intern: "+task.getPintern(),font) );
+            document.add( new Paragraph( "Observatii: "+task.getObsWorker(),font) );
+            document.add( new Paragraph( "Lucrari conf. situatie reala: "+task.getRealSituation(),font) );
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd LLLL yyyy");
+            String date = task.getDate()==null? "NULL" : task.getDate().format(formatter);
+            document.add( new Paragraph( "Data: "+date,font) );
+            document.add(new Paragraph("Images:",font));
+            for(Path path: paths){
+                addImage(document, path);
             }
+            document.newPage();
+
             document.add( Chunk.NEWLINE );
         }
         document.add( Chunk.NEWLINE );

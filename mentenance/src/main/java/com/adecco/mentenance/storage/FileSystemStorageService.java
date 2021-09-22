@@ -97,7 +97,9 @@ public class FileSystemStorageService {
 
 	public Resource loadAsResource(String filename) {
 		try {
+			System.out.println("Okk");
 			Path file = load(filename);
+			System.out.println(file.toString());
 			Resource resource = new UrlResource(file.toUri());
 			if (resource.exists() || resource.isReadable()) {
 				return resource;
@@ -142,7 +144,7 @@ public class FileSystemStorageService {
 	}
 
 	public List<Path> getImagePaths(Long tid) throws IOException {
-		Stream<Path> paths = Files.walk(Paths.get(tasksLocation.getFileName()+"/"+tid));
-		return paths.filter(Files::isRegularFile).collect(Collectors.toList());
+		Stream<Path> paths = Files.walk(Paths.get("tasks"+"\\"+tid+"\\"));
+		return paths.filter(p->p.toString().contains("jpg")|| p.toString().contains("png")||p.toString().contains("jpeg")).collect(Collectors.toList());
 	}
 }
